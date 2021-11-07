@@ -56,14 +56,21 @@ This repository contain all frequency ask interview questions in data structure 
 ## Other
 - Shuffle deck of cards
 - Form the minimum number from the given sequence of characters.(Airtel)
+	
 	D: Decreasing
+	
 	I: Increasing
+	
 	1-9 digits are allowed and you can not repeat the digits
+	
 	First letter of the sequence corresponds to two digits
 
 	I/p D , o/p  21
+	
 	i/p I , o/p  12
+	
 	i/p DD  o/p 321
+	
 	i/p DIDI  o/p 21435
 	
 ## Puzzle
