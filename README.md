@@ -25,6 +25,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Intersection and Union of three arrays(Paytm)](#IntersetionUnionThreeArray)
 - [Find element in array (logN)](#FindElementInArray) 
 - [Find length of repeated characters like **I/P->(aaabbbcdddaa)O/P->(a3b3cd3a2)**
+
 	if character is available single time then enter character without it's value](#RepeatedCharacters)
 - [Add two large string(Paytm)](#AddTwoLargeString)
 - [Find the length of the longest sequence of consecutive numbers **(N) like I/P->(1,9,3,10,4,20,2) O/P->4(1,2,3,4)**](#LargeConsecutiveNumbers)
