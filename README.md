@@ -2,8 +2,8 @@
 
 This repository contain all frequency ask interview questions in data structure and algo.
 
-## List
-- Prime numbers 1 to 100
+## ArrayList
+- [Prime numbers 1 to 100](#PrimeNumber)
 - Palindrome
 - String palindrome
 - Armstrong number
@@ -76,4 +76,56 @@ This repository contain all frequency ask interview questions in data structure 
 ## Puzzle
 - The 3 & 5 Litre Die Hard Water Puzzle
 - Spider web puzzle
+
+
+
+## PrimeNumber
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
