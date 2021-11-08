@@ -37,7 +37,7 @@ This repository contain all frequency ask interview questions in data structure 
 
 ## Linked list
 - Reverse Linked list
-- Reverse Linked list in pair like I/P->(1-2-3-4-5) O/P->(2-1-4-3-5)
+- Reverse Linked list in pair(Paytm) like I/P->(1-2-3-4-5) O/P->(2-1-4-3-5)
 - Find mid element in Linked List 
 - Find last nth element in Linked list
 - Get length of Linked list
