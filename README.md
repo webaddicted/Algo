@@ -99,11 +99,25 @@ This repository contain all frequency ask interview questions in data structure 
         }
       }	
 	
-	
-  
-	
-	
 ## Palindrome
+
+       void checkPalindrome() {
+          // O(N)
+          int number = 131;
+          int temp = number;
+          int sum = 0;
+          while (temp > 0) {
+            sum = (sum * 10) + temp % 10;
+            temp = (temp / 10).toInt();
+          }
+          if (sum == number) {
+            print("$number is palindrome number");
+          } else {
+            print("$number is not palindrome number");
+          }
+        }
+	
+	
 ## StringPalindrome
 ## ArmstrongNumber
 ## FactorialNumber
