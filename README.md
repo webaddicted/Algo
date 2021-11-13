@@ -136,8 +136,43 @@ This repository contain all frequency ask interview questions in data structure 
 	
 	
 ## ArmstrongNumber
+
+      void checkArmstrongNumber() {
+        int number = 153;
+        int temp = number;
+        int sum = 0;
+        while (temp > 0) {
+          int cube = temp % 10;
+          cube = cube * cube * cube;
+          sum = sum + cube;
+          temp = (temp / 10).toInt();
+        }
+        if (number == sum) {
+          print("$number is armstrong number");
+        } else {
+          print("$number is not armstrong number");
+        }
+      }
+      
 ## FactorialNumber
+
+
 ## FibonacciSeries
+
+      void fibonacciSeries() {
+        int number = 50;
+        int n3 = 0;
+        int n2 = 1;
+        int n1 = 0;
+        print("$n1, $n2");
+        for (int i = 1; i <= number; i++) {
+          n3 = n1 + n2;
+          print("$n3");
+          n1 = n2;
+          n2 = n3;
+        }
+      }
+
 ## AnagramString
 ## MissingNumberInArray
 ## DuplicateNumber
