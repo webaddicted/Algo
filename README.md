@@ -156,7 +156,15 @@ This repository contain all frequency ask interview questions in data structure 
       
 ## FactorialNumber
 
-
+      void factorialNumber() {
+        int number = 5;
+        int sum = 1;
+        for (int i = 1; i <= number; i++) {
+          sum = i * sum;
+        }
+        print("$number Factorial Number Is - $sum");
+      }
+      
 ## FibonacciSeries
 
       void fibonacciSeries() {
