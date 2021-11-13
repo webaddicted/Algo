@@ -3,7 +3,7 @@
 This repository contain all frequency ask interview questions in data structure and algo.
 
 ## ArrayList
-- [Prime numbers 1 to 100](#PrimeNumber)
+- [Check Prime numbers](#PrimeNumber)
 - [Palindrome Number](#Palindrome)
 - [String Palindrome](#StringPalindrome)
 - [Armstrong Number](#ArmstrongNumber)
@@ -78,6 +78,31 @@ This repository contain all frequency ask interview questions in data structure 
 - [Spider web puzzle](#SpiderWebPuzzle)
 
 ## PrimeNumber
+
+      void checkPrimeNumber() {
+        int number = 13;
+        if (number == 0 || number == 1) {
+          print("$number is not prime number");
+          return;
+        }
+        var isPrime = true;
+        for (int i = 2; i < number / 2; i++) {
+          if (number % i == 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          print("$number is prime number");
+        } else {
+          print("$number is not prime number");
+        }
+      }	
+	
+	
+  
+	
+	
 ## Palindrome
 ## StringPalindrome
 ## ArmstrongNumber
