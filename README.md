@@ -119,6 +119,22 @@ This repository contain all frequency ask interview questions in data structure 
 	
 	
 ## StringPalindrome
+
+        void checkPalindrome() {
+          // O(N)
+          String ipString = "TAT";
+          String opString = "";
+          for (int i = 0; i < ipString.length; i++) {
+            opString = ipString[i] + opString;
+          }
+          if (opString == ipString) {
+            print("$ipString is palindrome number");
+          } else {
+            print("$ipString is not palindrome number");
+          }
+        }
+	
+	
 ## ArmstrongNumber
 ## FactorialNumber
 ## FibonacciSeries
