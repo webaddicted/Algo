@@ -222,7 +222,19 @@ This repository contain all frequency ask interview questions in data structure 
 
     
 ## MissingNumberInArray
+	void main() {
+	  var array = [1, 2, 3, 5];
+	  int n = array.length;
+	  int sum = 0;
+	  for (int i = 0; i < n; i++) {
+		sum = sum + array[i];
+	  }
+	  var missingNumber = (((n + 2) * (n + 1)) / 2) - sum;
+	  print("MissingNumber :  $missingNumber");
+	}
+
 ## DuplicateNumber
+
 ## SecondLargest&SmallestNumber
 ## SubArrayOfGivenSum
 ## SubStringInParagraph
