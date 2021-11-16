@@ -11,7 +11,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Fibonacci Series](#FibonacciSeries)
 - [Anagram string **I/P->(TAB) O/P(BAT) true**](#AnagramString)
 - [Swap two element without third element](#SwapElement)
-- [Find missing number in array](#MissingNumberInArray)
+- [Find missing number in sorted array](#MissingNumberInArray)
 - [Find duplicate number in array](#DuplicateNumber)
 - [Find second largest and smallest number in array](#SecondLargest&SmallestNumber)
 - [Find subarray with given sum](#SubArrayOfGivenSum)
@@ -210,7 +210,7 @@ This repository contain all frequency ask interview questions in data structure 
     }
 
 ## SwapElement
-	void main() {
+	void swapElement() {
 	  int a = 5;
 	  int b = 10;
 	  print("Before - A: $a,  B: $b");
@@ -222,7 +222,7 @@ This repository contain all frequency ask interview questions in data structure 
 
     
 ## MissingNumberInArray
-	void main() {
+	void missingNumber() {
 	  var array = [1, 2, 3, 5];
 	  int n = array.length;
 	  int sum = 0;
@@ -234,8 +234,21 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## DuplicateNumber
+	void duplicateElement() {
+	  var array = [1, 2, 3, 2, 5, 5];
+	  int n = array.length;
+	  for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; j++) {
+		  if (array[i] == array[j]) {
+			print("Duplicate Element : ${array[j]}");
+		  }
+		}
+	  }
+	}
 
 ## SecondLargest&SmallestNumber
+
+
 ## SubArrayOfGivenSum
 ## SubStringInParagraph
 ## ReverseArray
