@@ -208,6 +208,18 @@ This repository contain all frequency ask interview questions in data structure 
         }
         return true;
     }
+
+## SwapElement
+	void main() {
+	  int a = 5;
+	  int b = 10;
+	  print("Before - A: $a,  B: $b");
+	  a = a + b;
+	  b = a - b;
+	  a = a - b;
+	  print("After - A: $a,  B: $b");
+	}
+
     
 ## MissingNumberInArray
 ## DuplicateNumber
