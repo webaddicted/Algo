@@ -282,6 +282,21 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## SubArrayOfGivenSum
+	void subArray() {
+	  var array = [5, 5, 1, 3];
+	  int givenSum = 9;
+	  int currentSum = 0;
+
+	  for (int i = 0; i < array.length; i++) {
+		currentSum = array[i];
+		for (int j = i + 1; j < array.length; j++) {
+		  currentSum = currentSum + array[j];
+		  if (currentSum == givenSum) {
+			print("SubArray At position $i, $j");
+		  }
+		}
+	  }
+	}
 
 ## SubStringInParagraph
 ## ReverseArray
