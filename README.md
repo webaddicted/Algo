@@ -247,7 +247,21 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## SecondLargest&SmallestNumber
+	void secLargestNumber() {
+	  var array = [1, 2, 3, 2, 4,5, 5];
+	  int largest = -1;
+	  int secLargest = -1;
 
+	  for (int i = 0; i < array.length; i++) {
+		if(array[i]>largest){
+		  secLargest = largest;
+		  largest = array[i]; 
+		}else if(array[i]>largest && largest!=array[i]){
+		   largest = array[i]; 
+		}
+	  }
+	  print("Largest Number: $largest,\nSecond Largest Number: $secLargest");
+	}
 
 ## SubArrayOfGivenSum
 ## SubStringInParagraph
