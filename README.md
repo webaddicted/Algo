@@ -182,6 +182,33 @@ This repository contain all frequency ask interview questions in data structure 
       }
 
 ## AnagramString
+    public static void main(String[] args) {
+        String s1 = "Tab".toLowerCase();
+        String s2 = "Bat".toLowerCase();
+
+        if (areAnagram(s1.toCharArray(), s2.toCharArray()))
+            System.out.print("Is Anagram");
+        else System.out.print("Not Anagram");
+    }
+    
+    static boolean areAnagram(char[] str1, char[] str2) {
+        if (str1.length != str2.length)
+            return false;
+        int NO_OF_CHARS = 256;
+        int[] count = new int[NO_OF_CHARS];
+        int i;
+
+        for (i = 0; i < str1.length; i++) {
+            count[str1[i] - 'a']++;
+            count[str2[i] - 'a']--;
+        }
+
+        for (i = 0; i < NO_OF_CHARS; i++) {
+            if (count[i] != 0) return false;
+        }
+        return true;
+    }
+    
 ## MissingNumberInArray
 ## DuplicateNumber
 ## SecondLargest&SmallestNumber
