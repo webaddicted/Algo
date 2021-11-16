@@ -16,7 +16,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Find second largest number in array](#SecondLargestNumber)
 - [Find second smallest number in array](#SecondSmallestNumber)
 - [Find subarray with given sum](#SubArrayOfGivenSum)
-- [Find substring in given paragraph](#SubStringInParagraph)
+- [Find repeated substring in given paragraph](#RepeatedSubStringInParagraph)
 - [Reverse array](#ReverseArray) 
 - [Star pyramid program](#StarPattern)
 - [Count number of zeros in array(logN)](#CountNumberOfZero)
@@ -298,7 +298,26 @@ This repository contain all frequency ask interview questions in data structure 
 	  }
 	}
 
-## SubStringInParagraph
+## RepeatedSubStringInParagraph
+	void repeatedString() {
+	  var para = "Test My Code My Code";
+	  var array = para.split(" ");
+	  Map<String, int> map = Map();
+	  for (int i = 0; i < array.length; i++) {
+		if(map.containsKey(array[i])){
+		  map[array[i]] = map[array[i]]!+1;
+		}else{
+		  map[array[i]] = 1;
+		}
+	  }
+	  for(String keys in map.keys){
+	   var value =  map[keys];
+		if(value!>1){
+		  print("Repeated String: $keys - $value times");
+		}
+	  }
+	}
+
 ## ReverseArray
 ## StarPattern
 ## CountNumberOfZero
