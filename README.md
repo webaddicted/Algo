@@ -13,7 +13,8 @@ This repository contain all frequency ask interview questions in data structure 
 - [Swap two element without third element](#SwapElement)
 - [Find missing number in sorted array](#MissingNumberInArray)
 - [Find duplicate number in array](#DuplicateNumber)
-- [Find second largest and smallest number in array](#SecondLargest&SmallestNumber)
+- [Find second largest number in array](#SecondLargestNumber)
+- [Find second smallest number in array](#SecondSmallestNumber)
 - [Find subarray with given sum](#SubArrayOfGivenSum)
 - [Find substring in given paragraph](#SubStringInParagraph)
 - [Reverse array](#ReverseArray) 
@@ -246,22 +247,24 @@ This repository contain all frequency ask interview questions in data structure 
 	  }
 	}
 
-## SecondLargest&SmallestNumber
+## SecondLargestNumber
 	void secLargestNumber() {
-	  var array = [1, 2, 3, 2, 4,5, 5];
+	  var array = [1, 2, 3, 2, 5, 5];
 	  int largest = -1;
 	  int secLargest = -1;
 
 	  for (int i = 0; i < array.length; i++) {
-		if(array[i]>largest){
+		if (array[i] > largest) {
 		  secLargest = largest;
-		  largest = array[i]; 
-		}else if(array[i]>largest && largest!=array[i]){
-		   largest = array[i]; 
+		  largest = array[i];
+		} else if (array[i] > secLargest && largest != array[i]) {
+		  secLargest = array[i];
 		}
 	  }
 	  print("Largest Number: $largest,\nSecond Largest Number: $secLargest");
 	}
+
+## SecondSmallestNumber
 
 ## SubArrayOfGivenSum
 ## SubStringInParagraph
