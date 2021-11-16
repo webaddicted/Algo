@@ -265,8 +265,24 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## SecondSmallestNumber
+	void secSmallestNumber() {
+	  var array = [5, 5, 1, 3];
+	  int smallest = array[0];
+	  int secSmallest = array[0];
+
+	  for (int i = 0; i < array.length; i++) {
+		if (array[i] < smallest) {
+		  secSmallest = smallest;
+		  smallest = array[i];
+		} else if (array[i] < secSmallest && smallest != array[i]) {
+		  secSmallest = array[i];
+		}
+	  }
+	  print("Smallest Number: $smallest,\nSecond Smallest Number: $secSmallest");
+	}
 
 ## SubArrayOfGivenSum
+
 ## SubStringInParagraph
 ## ReverseArray
 ## StarPattern
