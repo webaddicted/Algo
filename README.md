@@ -319,6 +319,16 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## ReverseArray
+	void reverseList() {
+	  var ipAarray = [10, 20, 30, 40];
+	  int n = ipAarray.length - 1;
+	  var opAarray = {};
+	  for (int i = 0; i < ipAarray.length; i++) {
+		opAarray[i] = ipAarray[n - i];
+	  }
+	  print("Reverse Array : $opAarray");
+	}
+
 ## StarPattern
 ## CountNumberOfZero
 ## CheckLeapYear
