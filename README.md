@@ -347,6 +347,23 @@ This repository contain all frequency ask interview questions in data structure 
 ## CountNumberOfZero
 ## CheckLeapYear
 ## Seperate012
+	void addString(String s1, String s2) {
+	  int carry = 0;
+	  var totalSum = "";
+	  for (int i = 0; i < s1.length; i++) {
+		var lastPos = s1.length - 1 - i;
+		var sum = (int.parse(s1[lastPos]) + int.parse(s2[lastPos])).toString();
+		if (sum.length > 1) {
+		  totalSum = (int.parse(sum[1]) + carry).toString() + totalSum;
+		  carry = int.parse(sum[0]);
+		} else {
+		  totalSum = (int.parse(sum) + carry).toString() + totalSum;
+		  carry = 0;
+		}
+	  }
+	  print("${totalSum}");
+	}
+
 ## IntersetionUnionTwoArray
 ## IntersetionUnionThreeArray
 ## FindElementInArray
