@@ -31,7 +31,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Add two large string(Paytm)](#AddTwoLargeString)
 - [Find the length of the longest sequence of consecutive numbers **(N) like I/P->(1,9,3,10,4,20,2) O/P->4(1,2,3,4)**](#LargeConsecutiveNumbers)
 - [Convert string into camel case and reverse **I/P->(my_test) O/P ->(myTest)(Nagarro)**](#StringIntoCamelCase)
-- [Merge and sort two array(M+N)](#MergeAndSortTwoArray)
+- [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
 - [Count frequency of give digits(1) in an array like **I/P-(10,11,12,13) find 1 O/P-(5)**](#CountFrequencyGivenOfDigit)
 - [Sort array (N)](#SortArray)
@@ -389,7 +389,7 @@ This repository contain all frequency ask interview questions in data structure 
 
 ## LargeConsecutiveNumbers
 ## StringIntoCamelCase
-## MergeAndSortTwoArray
+## MergeSortedTwoArray
 	void mergeSortedArray() {
 	  var arr1 = [1, 3, 5];
 	  var arr2 = [2, 4, 6];
@@ -416,6 +416,16 @@ This repository contain all frequency ask interview questions in data structure 
 	  }
 	  print("Merge Array : $arr3");
 	}
+**
+I/P -> 
+arr1 = {1,3,5}
+arr1 = {2,4,6}**
+
+**O/P -> {1,2,3,4,5,6}**
+
+
+
+
 
 ## CreateDynamicArray
 ## CountFrequencyGivenOfDigit
