@@ -416,8 +416,7 @@ This repository contain all frequency ask interview questions in data structure 
 	  }
 	  print("Merge Array : $arr3");
 	}
-**
-I/P -> 
+**I/P -> 
 arr1 = {1,3,5}
 arr1 = {2,4,6}**
 
