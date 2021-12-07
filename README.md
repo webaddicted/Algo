@@ -37,6 +37,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Sort array (N)](#SortArray)
 - [Selection Sort](#SelectionSort)
 - [Binary search](#BinarySearch)
+- [Find all triplets with zero sum (Paytm)](#FindAllTripletWithZeroSum)
 
 ## Linked list
 - [Reverse Linked list](#ReverseLinkedList)
