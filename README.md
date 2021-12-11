@@ -369,6 +369,15 @@ This repository contain all frequency ask interview questions in data structure 
 **O/P : Number of zero : 6**
 
 ## CheckLeapYear
+	void isLeapYear() {
+	  var year = 2020;
+	  if ((year % 4 == 0) && (year % 400 != 0) && (year % 400 == 0)) {
+		print("$year is leap year");
+	  } else {
+		print("$year is not leap year");
+	  }
+	}
+**O/P -> 2020 is not leap year**
 
 ## Seperate012
 	void addString(String s1, String s2) {
