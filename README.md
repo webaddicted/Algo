@@ -358,7 +358,18 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## CountNumberOfZero
+	void noOfZeros() {
+	  String n = "111000011100";
+	  int count = 0;
+	  for (int i = 0; i < n.length; i++) {
+		if (n[i] == '0') count++;
+	  }
+	  print("Number of zero : $count");
+	}
+**O/P : Number of zero : 6**
+
 ## CheckLeapYear
+
 ## Seperate012
 	void addString(String s1, String s2) {
 	  int carry = 0;
