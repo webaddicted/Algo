@@ -23,8 +23,10 @@ This repository contain all frequency ask interview questions in data structure 
 - [Count number of zeros in array(logN)](#CountNumberOfZero)
 - [Check Leap year](#CheckLeapYear)
 - [Seperate o's, 1's and 2's in array(HCL)](#Seperate012)
-- [Intersection and Union of two arrays(Paytm)](#IntersetionUnionTwoArray)
-- [Intersection and Union of three arrays(Paytm)](#IntersetionUnionThreeArray)
+- [Intersection of two arrays(Paytm)](#IntersetionTwoArray)
+- [Union of two arrays(Paytm)](#UnionTwoArray)
+- [Intersection of three arrays(Paytm)](#IntersetionThreeArray)
+- [Union of three arrays(Paytm)](#UnionThreeArray)
 - [Find element in array (logN)](#FindElementInArray) 
 - [Find length of repeated characters like **I/P->(aaabbbcdddaa)O/P->(a3b3cd3a2)**
 	if character is available single time then enter character without it's value](#RepeatedCharacters)
@@ -365,8 +367,37 @@ This repository contain all frequency ask interview questions in data structure 
 	  print("${totalSum}");
 	}
 
-## IntersetionUnionTwoArray
-## IntersetionUnionThreeArray
+## IntersetionTwoArray
+## UnionTwoArray
+
+void union() {
+  var arr1 = [1, 2, 4, 5, 6];
+  var arr2 = [2, 3, 5, 7];
+  int m = arr1.length;
+  int n = arr2.length;
+  int i = 0, j = 0;
+  while (i < m && j < n) {
+    if (arr1[i] < arr2[j]) {
+      print("${arr1[i++]}");
+    } else if (arr2[j] < arr1[i]) {
+      print("${arr2[j++]}");
+    } else {
+      print("${arr2[j++]}");
+      i++;
+    }
+  }
+  while (i < m) print("${arr1[i++]}");
+
+  while (j < n) print("${arr2[j++]}");
+}
+**I/P -> 
+arr1 = {1, 2, 4, 5, 6}
+arr1 = {2, 3, 5, 7}**
+
+**O/P -> {1,2,3,4,5,6}**
+
+## IntersetionThreeArray
+## UnionThreeArray
 ## FindElementInArray
 ## RepeatedCharacters
 ## AddTwoLargeString
@@ -417,15 +448,12 @@ This repository contain all frequency ask interview questions in data structure 
 	  }
 	  print("Merge Array : $arr3");
 	}
+	
 **I/P -> 
 arr1 = {1,3,5}
 arr1 = {2,4,6}**
 
 **O/P -> {1,2,3,4,5,6}**
-
-
-
-
 
 ## CreateDynamicArray
 ## CountFrequencyGivenOfDigit
