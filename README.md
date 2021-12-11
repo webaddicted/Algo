@@ -368,28 +368,55 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## IntersetionTwoArray
+	void printIntersection() {
+	  var arr1 = [1, 3, 3, 5];
+	  var arr2 = [2, 3, 5];
+	  int m = arr1.length;
+	  int n = arr2.length;
+	  int i = 0;
+	  int j = 0;
+
+	  while (i < m && j < n) {
+		if (arr1[i] < arr2[j]) {
+		  i++;
+		} else if (arr2[j] < arr1[i]) {
+		  j++;
+		} else {
+		  print("value ${arr2[j]}");
+		  i++;
+		  j++;
+		}
+	  }
+	}
+
+**I/P -> 
+arr1 = {1, 3, 3, 5}
+arr1 = {2, 3, 5}**
+
+**O/P -> {3,5}**
+
 ## UnionTwoArray
+	void union() {
+	  var arr1 = [1, 2, 4, 5, 6];
+	  var arr2 = [2, 3, 5, 7];
+	  int m = arr1.length;
+	  int n = arr2.length;
+	  int i = 0, j = 0;
+	  while (i < m && j < n) {
+		if (arr1[i] < arr2[j]) {
+		  print("${arr1[i++]}");
+		} else if (arr2[j] < arr1[i]) {
+		  print("${arr2[j++]}");
+		} else {
+		  print("${arr2[j++]}");
+		  i++;
+		}
+	  }
+	  while (i < m) print("${arr1[i++]}");
 
-void union() {
-  var arr1 = [1, 2, 4, 5, 6];
-  var arr2 = [2, 3, 5, 7];
-  int m = arr1.length;
-  int n = arr2.length;
-  int i = 0, j = 0;
-  while (i < m && j < n) {
-    if (arr1[i] < arr2[j]) {
-      print("${arr1[i++]}");
-    } else if (arr2[j] < arr1[i]) {
-      print("${arr2[j++]}");
-    } else {
-      print("${arr2[j++]}");
-      i++;
-    }
-  }
-  while (i < m) print("${arr1[i++]}");
+	  while (j < n) print("${arr2[j++]}");
+	}
 
-  while (j < n) print("${arr2[j++]}");
-}
 **I/P -> 
 arr1 = {1, 2, 4, 5, 6}
 arr1 = {2, 3, 5, 7}**
@@ -423,7 +450,7 @@ arr1 = {2, 3, 5, 7}**
 ## StringIntoCamelCase
 ## MergeSortedTwoArray
 	void mergeSortedArray() {
-	  var arr1 = [1, 3, 5];
+	  var arr1 = [1, 3,33e 5];
 	  var arr2 = [2, 4, 6];
 	  var arr3 = {};
 	  int m = arr1.length;
