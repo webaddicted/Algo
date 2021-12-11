@@ -356,12 +356,6 @@ This repository contain all frequency ask interview questions in data structure 
 		print("\n");
 	  }
 	}
-	
-**O/P**
-*
-* *
-* * *
-* * * *
 
 ## CountNumberOfZero
 ## CheckLeapYear
