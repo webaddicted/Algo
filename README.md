@@ -347,6 +347,22 @@ This repository contain all frequency ask interview questions in data structure 
 	}
 
 ## StarPattern
+	void starPattern() {
+	  int n = 5;
+	  for (int i = 0; i < n; i++) {
+		for (int j = 0; j < i; j++) {
+		  print("*");
+		}
+		print("\n");
+	  }
+	}
+	
+**O/P**
+*
+* *
+* * *
+* * * *
+
 ## CountNumberOfZero
 ## CheckLeapYear
 ## Seperate012
