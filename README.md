@@ -487,8 +487,34 @@ arr3 = {1, 3, 5}**
 **O/P -> {3,5}**
 
 ## UnionThreeArray
+
 ## FindElementInArray
+	void findElement(){
+	  var arr = [1,5,56,9,4,5,4,46,4];
+	  int key = 9;
+	  for(int i=0;i<arr.length;i++){
+		if(arr[i]==key){
+		  print("Element found at $i position");
+		}
+	  }
+	}
+	
 ## RepeatedCharacters
+	void repeatedCharacter() {
+	  var arr = "DeepakSharma";
+	  Map<String, int> map = Map();
+	  for (int i = 0; i < arr.length; i++) {
+		if (map.containsKey(arr[i])) {
+		  map[arr[i]] = map[arr[i]]! + 1;
+		} else {
+		  map[arr[i]] = 1;
+		}
+	  }
+	  print("O/P -> $map");
+	}
+
+**O/P -> {D: 1, e: 2, p: 1, a: 3, k: 1, S: 1, h: 1, r: 1, m: 1}**
+
 ## AddTwoLargeString
 
 	void addString(String s1, String s2) {
