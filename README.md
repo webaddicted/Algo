@@ -32,7 +32,8 @@ This repository contain all frequency ask interview questions in data structure 
 	if character is available single time then enter character without it's value](#RepeatedCharacters)
 - [Add two large string(Paytm)](#AddTwoLargeString)
 - [Find the length of the longest sequence of consecutive numbers **(N) like I/P->(1,9,3,10,4,20,2) O/P->4(1,2,3,4)**](#LargeConsecutiveNumbersRange)
-- [Convert string into camel case and reverse **I/P->(my_test) O/P ->(myTest)(Nagarro)**](#StringIntoCamelCase)
+- [Convert snake case string into camel case **I/P->(my_test) O/P ->(myTest)(Nagarro)**](#SnakeCaseIntoCamelCase)
+- [Convert camel case string into snake case **I/P->(myTest) O/P ->(my_test)(Nagarro)**](#CamelCaseIntoSnakeCase)
 - [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
 - [Count frequency of give digits(1) in an array like **I/P-(10,11,12,13) find 1 O/P-(5)**](#CountFrequencyGivenOfDigit)
@@ -555,7 +556,7 @@ arr3 = {1, 3, 5}**
 	  print("Range is : $ans");
 	}
 
-## StringIntoCamelCase
+## SnakeCaseIntoCamelCase
 	void camelCaseString() {
 	  var name = "my_new_class";
 	  var arr = name.split("_");
@@ -575,7 +576,26 @@ arr3 = {1, 3, 5}**
 **I/P -> 
 String str = my_new_class**
 
-**O/P -> Camel Case Name : myNewClass**
+**O/P -> Camel Case : myNewClass**
+
+## CamelCaseIntoSnakeCase
+	void snakeCaseString() {
+	  var name = "myNewClass";
+	  var snakeCaseName = '';
+	  for (int i = 0; i < name.length; i++) {
+		var item = name[i];
+		if (item.toUpperCase() == item) {
+		  snakeCaseName = snakeCaseName + "_" + item.toLowerCase();
+		} else {
+		  snakeCaseName = snakeCaseName + item;
+		}
+	  }
+	  print("Camel to snake case : $snakeCaseName");
+	}
+**I/P -> 
+String str = myNewClass**
+
+**O/P -> Snake Case : my_new_class**
 
 ## MergeSortedTwoArray
 	void mergeSortedArray() {
