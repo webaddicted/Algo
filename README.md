@@ -31,7 +31,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Find length of repeated characters like **I/P->(aaabbbcdddaa)O/P->(a3b3cd3a2)**
 	if character is available single time then enter character without it's value](#RepeatedCharacters)
 - [Add two large string(Paytm)](#AddTwoLargeString)
-- [Find the length of the longest sequence of consecutive numbers **(N) like I/P->(1,9,3,10,4,20,2) O/P->4(1,2,3,4)**](#LargeConsecutiveNumbers)
+- [Find the length of the longest sequence of consecutive numbers **(N) like I/P->(1,9,3,10,4,20,2) O/P->4(1,2,3,4)**](#LargeConsecutiveNumbersRange)
 - [Convert string into camel case and reverse **I/P->(my_test) O/P ->(myTest)(Nagarro)**](#StringIntoCamelCase)
 - [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
@@ -534,8 +534,29 @@ arr3 = {1, 3, 5}**
 	  print("${totalSum}");
 	}
 
-## LargeConsecutiveNumbers
+## LargeConsecutiveNumbersRange
+	void largeConsecutiveNumbersRange() {
+	 var arr = [5,8,6,7,1,5,62,56,1,61,61,5];
+	  Set<int> setValue = {};
+	  
+	  for(int i=0;i<arr.length;i++){
+		setValue.add(arr[i]);
+	  }
+	  int ans=0;
+	   for(int i=0;i<arr.length;i++){
+		 if(setValue.contains(arr[i])){
+		   int j = arr[i];
+		   while(setValue.contains(j)){
+			 j++;
+			 if((j - arr[i])>ans)ans = j - arr[i];
+		   }
+		 }
+	   }
+	  print("Range is : $ans");
+	}
+
 ## StringIntoCamelCase
+
 ## MergeSortedTwoArray
 	void mergeSortedArray() {
 	  var arr1 = [1, 3,33e 5];
