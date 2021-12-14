@@ -556,6 +556,26 @@ arr3 = {1, 3, 5}**
 	}
 
 ## StringIntoCamelCase
+	void camelCaseString() {
+	  var name = "my_new_class";
+	  var arr = name.split("_");
+	  var camelCaseName = '';
+	  for (int i = 0; i < arr.length; i++) {
+		var item = arr[i];
+		if (i == 0) {
+		  camelCaseName = item;
+		} else {
+		  camelCaseName = camelCaseName +
+			  item[0].toUpperCase() +
+			  (item.substring(1, item.length));
+		}
+	  }
+	  print("Camel Case Name : $camelCaseName");
+	}
+**I/P -> 
+String str = my_new_class**
+
+**O/P -> Camel Case Name : myNewClass**
 
 ## MergeSortedTwoArray
 	void mergeSortedArray() {
