@@ -632,6 +632,68 @@ arr1 = {2,4,6}**
 **O/P -> {1,2,3,4,5,6}**
 
 ## CreateDynamicArray
+	public class DynamicArray {
+		static int defaultSize = 2;
+		static int[] arr = new int[defaultSize];
+		static int currentSize = 0;
+
+		public static void add(int value) {
+			if (currentSize >= arr.length) {
+				int[] temp = new int[arr.length + defaultSize];
+				for (int i = 0; i < arr.length; i++) {
+					temp[i] = arr[i];
+				}
+				arr = temp;
+			}
+			arr[currentSize] = value;
+			currentSize++;
+			printValue();
+		}
+
+		public static int add(int index, int value) {
+			if (arr.length > index) {
+				arr[index] = value;
+				printValue();
+				return value;
+			}
+			return -1;
+		}
+
+		public static int remove(int index) {
+			if (arr.length > index) {
+				int[] temp = new int[arr.length];
+				int count = 0;
+				for (int i = 0; i < arr.length; i++) {
+					if (index != i) {
+						temp[count] = arr[i];
+						count++;
+					}
+				}
+				arr = temp;
+				printValue();
+				return arr[index];
+			}
+			return -1;
+		}
+
+		public static int getSize() {
+			return arr.length;
+		}
+
+		public static void printValue() {
+			for (int i = 0; i < arr.length; i++) {
+				System.out.println("Values : " + arr[i]);
+			}
+			System.out.println("\n\n\n\n");
+		}
+	}
+**DynamicArray.add(1);
+      DynamicArray.add(2);
+      DynamicArray.add(3);
+      DynamicArray.add(4);
+      DynamicArray.add(8,9);
+      DynamicArray.remove(1);**
+	
 ## CountFrequencyGivenOfDigit
 ## SortArray
 ## SelectionSort
