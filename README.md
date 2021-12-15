@@ -61,22 +61,14 @@ This repository contain all frequency ask interview questions in data structure 
 
 ## Other
 - [Shuffle deck of cards](#ShuffleDeckOfCards)
-- [Form the minimum number from the given sequence of characters.(Airtel)   
-
-	D: Decreasing
-	
-	I: Increasing
-	
-	1-9 digits are allowed and you can not repeat the digits
-	
-	First letter of the sequence corresponds to two digits
-
-	I/p D , o/p  21
-	
-	i/p I , o/p  12
-	
-	i/p DD  o/p 321
-	
+- [Form the minimum number from the given sequence of characters.(Airtel)<br>
+	D: Decreasing<br>
+	I: Increasing<br>
+	1-9 digits are allowed and you can not repeat the digits<br>
+	First letter of the sequence corresponds to two digits<br>
+	I/p D , o/p  21<br>
+	i/p I , o/p  12<br>
+	i/p DD  o/p 321<br>
 	i/p DIDI  o/p 21435](#DIDILogic)
 	
 ## Puzzle
@@ -420,8 +412,8 @@ This repository contain all frequency ask interview questions in data structure 
 	  }
 	}
 
-**I/P -> 
-arr1 = {1, 3, 3, 5}
+**I/P -><br>
+arr1 = {1, 3, 3, 5}<br>
 arr2 = {2, 3, 5}**
 
 **O/P -> {3,5}**
@@ -448,8 +440,8 @@ arr2 = {2, 3, 5}**
 	  while (j < n) print("${arr2[j++]}");
 	}
 
-**I/P -> 
-arr1 = {1, 2, 4, 5, 6}
+**I/P -><br>
+arr1 = {1, 2, 4, 5, 6}<br>
 arr2 = {2, 3, 5, 7}**
 
 **O/P -> {1,2,3,4,5,6}**
@@ -480,9 +472,9 @@ arr2 = {2, 3, 5, 7}**
 		}
 	  }
 	}
-**I/P -> 
-arr1 = {1, 3, 3, 5}
-arr2 = {2, 3, 5}
+**I/P -><br>
+arr1 = {1, 3, 3, 5}<br>
+arr2 = {2, 3, 5}<br>
 arr3 = {1, 3, 5}**
 
 **O/P -> {3,5}**
@@ -625,8 +617,8 @@ String str = myNewClass**
 	  print("Merge Array : $arr3");
 	}
 	
-**I/P -> 
-arr1 = {1,3,5}
+**I/P -> <br>
+arr1 = {1,3,5}<br>
 arr1 = {2,4,6}**
 
 **O/P -> {1,2,3,4,5,6}**
@@ -687,11 +679,11 @@ arr1 = {2,4,6}**
 			System.out.println("\n\n\n\n");
 		}
 	}
-**DynamicArray.add(1);
-      DynamicArray.add(2);
-      DynamicArray.add(3);
-      DynamicArray.add(4);
-      DynamicArray.add(8,9);
+**DynamicArray.add(1);<br>
+      DynamicArray.add(2);<br>
+      DynamicArray.add(3);<br>
+      DynamicArray.add(4);<br>
+      DynamicArray.add(8,9);<br>
       DynamicArray.remove(1);**
 	
 ## CountFrequencyGivenOfDigit
