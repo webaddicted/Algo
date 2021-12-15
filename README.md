@@ -31,20 +31,20 @@ This repository contain all frequency ask interview questions in data structure 
 - [Find length of repeated characters like :](#RepeatedCharacters)<br>**I/P->(aaabbbcdddaa)<br>O/P->(a3b3cd3a2)<br>
 	if character is available single time then enter character without it's value**
 - [Add two large string **(Paytm)**](#AddTwoLargeString)
-- [Find the length of the longest sequence of consecutive numbers](#LargeConsecutiveNumbersRange)**O(N) like :<br>I/P->(1,9,3,10,4,20,2) <br>O/P->4(1,2,3,4)**
+- [Find the length of the longest sequence of consecutive numbers ](#LargeConsecutiveNumbersRange)**O(N) like :<br>I/P->(1,9,3,10,4,20,2) <br>O/P->4(1,2,3,4)**
 - [Convert snake case string into camel case **(Nagarro)**](#SnakeCaseIntoCamelCase)**<br>I/P->(my_test) <br>O/P ->(myTest)**
 - [Convert camel case string into snake case **(Nagarro)**](#CamelCaseIntoSnakeCase)**<br>I/P->(myTest) <br>O/P ->(my_test)**
 - [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
-- [Count frequency of give digits(1) in an array](#CountFrequencyGivenOfDigit)**like :<br>I/P-(10,11,12,13) <br>find 1 O/P-(5)**
+- [Count frequency of give digits(1) in an array ](#CountFrequencyGivenOfDigit)**like :<br>I/P-(10,11,12,13) <br>find 1 O/P-(5)**
 - [Sort array (N)](#SortArray)
 - [Selection Sort](#SelectionSort)
 - [Binary search](#BinarySearch)
-- [Find all triplets with zero sum (Paytm)](#FindAllTripletWithZeroSum)
+- [Find all triplets with zero sum **(Paytm)**](#FindAllTripletWithZeroSum)
 
 ## Linked list
 - [Reverse Linked list](#ReverseLinkedList)
-- [Reverse Linked list in pair **(Paytm)**](#ReverseLinkedListInPair) **like : <br>I/P->(1-2-3-4-5) <br>O/P->(2-1-4-3-5)**
+- [Reverse Linked list in pair **(Paytm)** ](#ReverseLinkedListInPair) **like : <br>I/P->(1-2-3-4-5) <br>O/P->(2-1-4-3-5)**
 - [Find mid element in Linked List](#MidElementInLinkedList)
 - [Find last nth element in Linked list](#LastNthItemInLinkedList)
 - [Get length of Linked list](GetLengthOfLinkedList)
