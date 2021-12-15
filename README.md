@@ -9,7 +9,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Armstrong Number](#ArmstrongNumber)
 - [Factorial Number](#FactorialNumber)
 - [Fibonacci Series](#FibonacciSeries)
-- [Anagram string **<br>I/P->(TAB) <br>O/P(BAT) true**](#AnagramString)
+- [Anagram string](#AnagramString)**<br>I/P->(TAB) <br>O/P(BAT) true**
 - [Swap two element without third element](#SwapElement)
 - [Find missing number in sorted array](#MissingNumberInArray)
 - [Find duplicate number in array](#DuplicateNumber)
