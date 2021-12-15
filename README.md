@@ -679,12 +679,12 @@ arr1 = {2,4,6}**
 			System.out.println("\n\n\n\n");
 		}
 	}
-**I/P :<br>**DynamicArray.add(1);<br>
+**I/P : **<br>DynamicArray.add(1);<br>
       DynamicArray.add(2);<br>
       DynamicArray.add(3);<br>
       DynamicArray.add(8,9);<br>
       DynamicArray.remove(1);<br>
-**O/P :<br>**
+**O/P :**<br>
 Add 1 : {1}<br>
 Add 2 : {1,2}<br>
 Add 3 : {1,2,3}<br>
