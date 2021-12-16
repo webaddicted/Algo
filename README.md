@@ -36,7 +36,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Convert camel case string into snake case **(Nagarro)**](#CamelCaseIntoSnakeCase)**<br>I/P->(myTest) <br>O/P ->(my_test)**
 - [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
-- [Count frequency of give digits(1) in number](#CountFrequencyGivenOfDigit)**like :<br>I/P-10111213 <br>find 1 O/P-(5)**
+- [Count frequency of give digits(1) in number ](#CountFrequencyGivenOfDigit)**like :<br>I/P-10111213 <br>find 1 O/P-(5)**
 - [Sort array (N)](#SortArray)
 - [Selection Sort](#SelectionSort)
 - [Binary search](#BinarySearch)
@@ -692,6 +692,25 @@ Add 8 with index : {1,2,3}<br>
 Remove 1 : {1,3}
 	
 ## CountFrequencyGivenOfDigit
+	void frequencyOfGivenDigit() {
+	  var number = 10111213;
+	  var givenNumber = 1;
+	  var temp = number;
+	  var count = 0;
+	  while (temp > 0) {
+		if (temp % 10 == givenNumber) {
+		  count++;
+		}
+		temp = (temp / 10).toInt();
+	  }
+	  print("Count $count");
+	}
+	
+**I/P -> <br>
+ number= 10111213 givenNumber = 1 <br>O/P -> Count 5**
+
+**O/P -> {1,2,3,4,5,6}**
+
 ## SortArray
 ## SelectionSort
 ## BinarySearch
