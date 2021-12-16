@@ -36,7 +36,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Convert camel case string into snake case **(Nagarro)**](#CamelCaseIntoSnakeCase)**<br>I/P->(myTest) <br>O/P ->(my_test)**
 - [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
-- [Count frequency of give digits(1) in an array ](#CountFrequencyGivenOfDigit)**like :<br>I/P-(10,11,12,13) <br>find 1 O/P-(5)**
+- [Count frequency of give digits(1) in number](#CountFrequencyGivenOfDigit)**like :<br>I/P-10111213 <br>find 1 O/P-(5)**
 - [Sort array (N)](#SortArray)
 - [Selection Sort](#SelectionSort)
 - [Binary search](#BinarySearch)
