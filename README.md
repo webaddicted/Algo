@@ -706,8 +706,7 @@ Remove 1 : {1,3}
 	  print("Count $count");
 	}
 	
-**I/P -> <br>
- number= 10111213 givenNumber = 1 <br>O/P -> Count 5**
+**I/P -> Number = 10111213,  Given Number = 1 <br>O/P -> Count 5**
 
 **O/P -> {1,2,3,4,5,6}**
 
