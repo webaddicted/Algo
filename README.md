@@ -38,6 +38,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
 - [Count frequency of give digits(1) in number ](#CountFrequencyGivenOfDigit)**like :<br>I/P-10111213 <br>find 1 O/P-(5)**
 - [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
+- [Shuffle deck of cards](#ShuffleDeckOfCards)
 - [Sort array (N)](#SortArray)
 - [Binary search](#BinarySearch)
 - [Find all triplets with zero sum **(Paytm)**](#FindAllTripletWithZeroSum)
@@ -60,7 +61,6 @@ This repository contain all frequency ask interview questions in data structure 
 - [Bind Service](#BindService) 
 
 ## Other
-- [Shuffle deck of cards](#ShuffleDeckOfCards)
 - [Form the minimum number from the given sequence of characters.(Airtel)<br>
 	D: Decreasing<br>
 	I: Increasing<br>
@@ -732,6 +732,7 @@ Remove 1 : {1,3}
 	}
 **I/P -> arr = {1, 2, 5, 1, 2}<br>**
 **O/P -> Pivot index : 2**
+## ShuffleDeckOfCards
 
 ## SortArray
 	void sort() {
@@ -754,6 +755,28 @@ Remove 1 : {1,3}
 **O/P -> Sorted array :  [1, 2, 4, 5]**
 
 ## BinarySearch
+	void binarySearch() {
+	  var arr = [1, 2, 3, 4, 5, 6, 7];
+	  var item = 2;
+	  var li = 0;
+	  var hi = arr.length;
+	  var mid = ((hi + li) / 2).toInt();
+
+	  while (li <= hi) {
+		if (arr[mid] == item) {
+		  print("Item $item find at Index $mid");
+		  break;
+		} else if (arr[mid] < item) {
+		  li = mid + 1;
+		} else {
+		  hi = mid - 1;
+		}
+		mid = ((hi + li) / 2).toInt();
+	  }
+	}
+**I/P -> arr = {1, 2, 3, 4, 5, 6, 7}<br>**
+**O/P -> Item 2 find at Index 1**
+
 ## ReverseLinkedList
 ## ReverseLinkedListInPair
 ## MidElementInLinkedList
@@ -763,7 +786,6 @@ Remove 1 : {1,3}
 ## ReverseStack
 ## ImplementQueuesUsingStack
 ## BindService
-## ShuffleDeckOfCards
 ## DIDILogic
 ## 3_5LiterWaterPuzzle
 ## SpiderWebPuzzle
