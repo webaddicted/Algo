@@ -56,11 +56,12 @@ B) Java**
 - [Reverse Linked list in pair **(Paytm)** ](#ReverseLinkedListInPair) **like : <br>I/P->(1-2-3-4-5) <br>O/P->(2-1-4-3-5)**
 - [Find mid element in Linked List](#MidElementInLinkedList)
 - [Find last nth element in Linked list](#LastNthItemInLinkedList)
-- [Get length of Linked list](GetLengthOfLinkedList)
+- [Get length of Linked list](#GetLengthOfLinkedList)
 
 ## Stack
 - [Implement a stack using queues **(Airtel)**](#ImplementStackUsingQueues)
 - [Reverse a stack](#ReverseStack)
+- [Check for Balanced Brackets in an expression (well-formedness) using Stack](#CheckBalancedBrackets)
 
 ## Queue
 - [Implement a queues using stack](#ImplementQueuesUsingStack)
@@ -882,6 +883,9 @@ Triplets whose sum is zero -2+1+1==0<br>
 	}
 **I/P -> arr = {1, 2, 3, 4}<br>**
 **O/P -> arr = {4, 3, 2, 1}**
+
+## CheckBalancedBrackets
+
 
 ## ImplementQueuesUsingStack
 	
