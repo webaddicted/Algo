@@ -731,8 +731,7 @@ Remove 1 : {1,3}
 		findPivotIndex(++pivotIndex);
 	  }
 	}
-**I/P -> <br>
-arr = {1, 2, 5, 1, 2}<br>**
+**I/P -> arr = {1, 2, 5, 1, 2}<br>**
 **O/P -> Pivot index : 2**
 
 ## SortArray
