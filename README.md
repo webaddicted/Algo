@@ -844,7 +844,7 @@ Triplets whose sum is zero -2+1+1==0<br>
 			}
 		}
 
-		public static Integer pull() {
+		public static Integer pop() {
 			if (q1.isEmpty()) return -1;
 			return q1.remove();
 		}
@@ -864,7 +864,37 @@ Triplets whose sum is zero -2+1+1==0<br>
 ## ImplementQueuesUsingStack
 	
 **Step 1 : Push()<br>1) s1 transfer to s2<br>2) x value add to s1<br>3) s2 transfer to s1 back**
-	
+
+	public class Test {
+		static Stack<Integer> s1 = new Stack<>();
+		static Stack<Integer> s2 = new Stack<>();
+
+
+		public static void push(Integer x) {
+			while (!s1.empty()) {
+				s2.push(s1.pop());
+			}
+			s1.push(x);
+			while (!s2.empty()) {
+				s1.push(s2.pop());
+			}
+		}
+
+		public static Integer pop() {
+			if (s1.isEmpty()) return -1;
+			return s1.pop();
+		}
+
+		public static Integer top() {
+			return s1.peek();
+		}
+
+		public static void print() {
+			for (int i = 0; i < s1.size(); i++) {
+				System.out.println("" + s1.elements());
+			}
+		}
+	}
 	
 ## BindService
 ## DIDILogic
