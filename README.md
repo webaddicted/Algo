@@ -733,7 +733,28 @@ Remove 1 : {1,3}
 **I/P -> arr = {1, 2, 5, 1, 2}<br>**
 **O/P -> Pivot index : 2**
 ## ShuffleDeckOfCards
-
+    public static void shuffleDeckOfCards() {
+        int cardSize[] = {0, 1, 2, 3, 4, 5, 6, 7, 8,
+                9, 10, 11, 12, 13, 14, 15,
+                16, 17, 18, 19, 20, 21, 22,
+                23, 24, 25, 26, 27, 28, 29,
+                30, 31, 32, 33, 34, 35, 36,
+                37, 38, 39, 40, 41, 42, 43,
+                44, 45, 46, 47, 48, 49, 50,
+                51};
+        
+        Random ran = new Random();
+        int numberOfCard = cardSize.length;
+        for (int i = 0; i < numberOfCard; i++) {
+            int randomPos = i + ran.nextInt(numberOfCard - i);
+            int temp = cardSize[i];
+            cardSize[i] = cardSize[randomPos];
+            cardSize[randomPos] = temp;
+        }
+        for (int i = 0; i < numberOfCard; i++)
+            System.out.print(cardSize[i] + " ");
+    }
+    
 ## SortArray
 	void sort() {
 	  var arr = [5, 4, 2, 1];
