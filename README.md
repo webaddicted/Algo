@@ -831,6 +831,7 @@ Triplets whose sum is zero -2+1+1==0<br>
 ## MidElementInLinkedList
 ## LastNthItemInLinkedList
 ## GetLengthOfLinkedList
+
 ## ImplementStackUsingQueues
 **Step 1 : Push()<br>1) x element add into queue<br>2) q1.add(q1.remove()); untill size-1 queue**
 
@@ -861,6 +862,27 @@ Triplets whose sum is zero -2+1+1==0<br>
 	}
 
 ## ReverseStack
+	public class Test {
+		public static Stack<Integer> s1 = new Stack<>();
+		public static Stack<Integer> s2 = new Stack<>();
+
+		public static void push() {
+			s1.push(1);
+			s1.push(2);
+			s1.push(3);
+			s1.push(4);
+		}
+
+		public static void reverse() {
+			for (int i =0; i<s1.size();i++){
+				s2.push(s1.elementAt(s1.size()-1-i));
+			}
+			s1.addAll(s2);
+		}
+	}
+**I/P -> arr = {1, 2, 3, 4}<br>**
+**O/P -> arr = {4, 3, 2, 1}**
+
 ## ImplementQueuesUsingStack
 	
 **Step 1 : Push()<br>1) s1 transfer to s2<br>2) x value add to s1<br>3) s2 transfer to s1 back**
@@ -868,7 +890,6 @@ Triplets whose sum is zero -2+1+1==0<br>
 	public class Test {
 		static Stack<Integer> s1 = new Stack<>();
 		static Stack<Integer> s2 = new Stack<>();
-
 
 		public static void push(Integer x) {
 			while (!s1.empty()) {
