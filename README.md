@@ -1,6 +1,14 @@
 # Algorithm
 
 This repository contain all frequency ask interview questions in data structure and algo.
+Solution provide in two language :<br>
+A) Dart<br>
+B) Java
+
+**Online platform for execute these code :<br>
+[Dart Online Platform](https://dartpad.dev/?)<br>
+[Java Online Platform](https://www.tutorialspoint.com/compile_java_online.php)**
+
 
 ## ArrayList
 - [Check Prime numbers](#PrimeNumber)
