@@ -39,7 +39,6 @@ This repository contain all frequency ask interview questions in data structure 
 - [Count frequency of give digits(1) in number ](#CountFrequencyGivenOfDigit)**like :<br>I/P-10111213 <br>find 1 O/P-(5)**
 - [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
 - [Sort array (N)](#SortArray)
-- [Selection Sort](#SelectionSort)
 - [Binary search](#BinarySearch)
 - [Find all triplets with zero sum **(Paytm)**](#FindAllTripletWithZeroSum)
 
@@ -735,7 +734,25 @@ Remove 1 : {1,3}
 **O/P -> Pivot index : 2**
 
 ## SortArray
-## SelectionSort
+	void sort() {
+	  var arr = [5, 4, 2, 1];
+	  var isSorted = false;
+	  while (!isSorted) {
+		isSorted = true;
+		for (int i = 0; i < arr.length - 1; i++) {
+		  if (arr[i] > arr[i + 1]) {
+			var temp = arr[i];
+			arr[i] = arr[i + 1];
+			arr[i + 1] = temp;
+			isSorted = false;
+		  }
+		}
+	  }
+	  print("Sorted array :  $arr");
+	}
+**I/P -> arr = {5, 4, 2, 1}<br>**
+**O/P -> Sorted array :  [1, 2, 4, 5]**
+
 ## BinarySearch
 ## ReverseLinkedList
 ## ReverseLinkedListInPair
