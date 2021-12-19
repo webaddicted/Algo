@@ -832,8 +832,39 @@ Triplets whose sum is zero -2+1+1==0<br>
 ## LastNthItemInLinkedList
 ## GetLengthOfLinkedList
 ## ImplementStackUsingQueues
+**Step 1 : Push()<br>1) Add element into queue<br>2) Leave last element and remove all element and add again q1.add(q1.remove()); untill size of queue size-1**
+	public class Test {
+		static Queue<Integer> q1 = new LinkedList();
+
+		public static void push(Integer x) {
+			q1.add(x);
+			for (int i = 0; i < q1.size() - 1; i++) {
+				q1.add(q1.remove());
+			}
+		}
+
+		public static Integer pull() {
+			if (q1.isEmpty()) return -1;
+			return q1.remove();
+		}
+
+		public static Integer top() {
+			return q1.peek();
+		}
+
+		public static void print() {
+			for (int i = 0; i < q1.size(); i++) {
+				System.out.println("" + q1.element());
+			}
+		}
+	}
+
 ## ReverseStack
 ## ImplementQueuesUsingStack
+	
+**Step 1 : Push()<br>1) s1 transfer to s2<br>2) x value add to s1<br>3) s2 transfer to s1 back**
+
+	
 ## BindService
 ## DIDILogic
 ## 3_5LiterWaterPuzzle
