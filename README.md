@@ -777,6 +777,26 @@ Remove 1 : {1,3}
 **I/P -> arr = {1, 2, 3, 4, 5, 6, 7}<br>**
 **O/P -> Item 2 find at Index 1**
 
+## FindAllTripletWithZeroSum
+	void findTriplets() {
+	  var arr = [1, 2, 5, 8, 9, -1, -2];
+	  for (int i = 0; i < arr.length; i++) {
+		for (int j = 0; j < arr.length; j++) {
+		  for (int k = 0; k < arr.length; k++) {
+			if (arr[i] + arr[j] + arr[k] == 0) {
+			  print("Triplets whose sum is zero ${arr[i]}+${arr[j]}+${arr[k]}==0");
+			}
+		  }
+		}
+	  }
+	}
+Triplets whose sum is zero 1+1+-2==0<br>
+Triplets whose sum is zero 1+-2+1==0<br>
+Triplets whose sum is zero 2+-1+-1==0<br>
+Triplets whose sum is zero -1+2+-1==0<br>
+Triplets whose sum is zero -1+-1+2==0<br>
+Triplets whose sum is zero -2+1+1==0<br>
+
 ## ReverseLinkedList
 ## ReverseLinkedListInPair
 ## MidElementInLinkedList
