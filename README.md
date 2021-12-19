@@ -34,6 +34,7 @@ This repository contain all frequency ask interview questions in data structure 
 - [Find the length of the longest sequence of consecutive numbers ](#LargeConsecutiveNumbersRange)**O(N) like :<br>I/P->(1,9,3,10,4,20,2) <br>O/P->4(1,2,3,4)**
 - [Convert snake case string into camel case **(Nagarro)**](#SnakeCaseIntoCamelCase)**<br>I/P->(my_test) <br>O/P ->(myTest)**
 - [Convert camel case string into snake case **(Nagarro)**](#CamelCaseIntoSnakeCase)**<br>I/P->(myTest) <br>O/P ->(my_test)**
+- [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
 - [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
 - [Count frequency of give digits(1) in number ](#CountFrequencyGivenOfDigit)**like :<br>I/P-10111213 <br>find 1 O/P-(5)**
@@ -709,6 +710,30 @@ Remove 1 : {1,3}
 **I/P -> Number = 10111213,  Given Number = 1 <br>O/P -> Count 5**
 
 **O/P -> {1,2,3,4,5,6}**
+
+## FindPivotIndexInArray
+	void findPivotIndex(int pivotIndex) {
+	  var arr = [1, 2, 5, 1, 2];
+	  var leftSum = 0;
+	  var rightSum = 0;
+
+	  for (int i = 0; i < pivotIndex; i++) {
+		leftSum = leftSum + arr[i];
+	  }
+	  for (int i = pivotIndex + 1; i < arr.length; i++) {
+		rightSum = rightSum + arr[i];
+	  }
+	  if (leftSum == rightSum) {
+		print("pivot index : $pivotIndex");
+	  } else if (pivotIndex == arr.length - 1) {
+		print("pivot index not available");
+	  } else {
+		findPivotIndex(++pivotIndex);
+	  }
+	}
+**I/P -> <br>
+arr = {1, 2, 5, 1, 2}<br>**
+**O/P -> Pivot index : 2**
 
 ## SortArray
 ## SelectionSort
