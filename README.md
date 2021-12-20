@@ -835,6 +835,16 @@ Triplets whose sum is zero -2+1+1==0<br>
 ## ReverseLinkedList
 ## ReverseLinkedListInPair
 ## MidElementInLinkedList
+    void findMidElement(Node node){
+        Node slowPtr = node;
+        Node fastPtr = node;
+
+        while(fastPtr!=null && fastPtr.next!=null){
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+        }
+        print("Mid element ${slowPtr.data}");
+    }
 ## LastNthItemInLinkedList
 ## GetLengthOfLinkedList
 
