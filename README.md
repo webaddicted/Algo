@@ -833,7 +833,22 @@ Triplets whose sum is zero -1+-1+2==0<br>
 Triplets whose sum is zero -2+1+1==0<br>
 
 ## ReverseLinkedList
+    void reverseLinkedList(Node node) {
+        Node pre = null;
+        Node current = node;
+        Node next = null;
+
+        while (current != null) {
+            next = current.next;
+            current.next = pre;
+            pre = current;
+            current = next;
+        }
+        node = pre;
+        return node;
+    }
 ## ReverseLinkedListInPair
+
 ## MidElementInLinkedList
     void findMidElement(Node node){
         Node slowPtr = node;
