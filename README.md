@@ -885,7 +885,44 @@ Triplets whose sum is zero -2+1+1==0<br>
 **O/P -> arr = {4, 3, 2, 1}**
 
 ## CheckBalancedBrackets
+	public class Test {
+		public static Stack<Character> s1 = new Stack<>();
 
+		public static boolean isBracketBalance() {
+			String str = "([{}])";
+			for (int i = 0; i < str.length(); i++) {
+				char item = str.charAt(i);
+				if (item == '(' || item == '{' || item == '[') {
+					s1.push(item);
+					continue;
+				}
+				char check;
+				switch (item) {
+					case ')': {
+						check = s1.pop();
+						if (check == '{' || check == '[')
+							return false;
+						break;
+					}
+					case '}': {
+						check = s1.pop();
+						if (check == '(' || check == '[')
+							return false;
+						break;
+					}
+					case ']': {
+						check = s1.pop();
+						if (check == '(' || check == '{')
+							return false;
+						break;
+					}
+
+				}
+			}
+			return s1.isEmpty();
+		}
+	}
+**Is Bracket Balance : false**
 
 ## ImplementQueuesUsingStack
 	
