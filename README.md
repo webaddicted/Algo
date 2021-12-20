@@ -67,7 +67,10 @@ B) Java**
 - [Implement a queues using stack](#ImplementQueuesUsingStack)
 
 ## Android
-- [Bind Service](#BindService) 
+- [Bind Service](#BindService)
+- [Local Broadcast Receiver](#LocalBrodcastReceiver)
+- [LRU - Least Recently Used Cache](#LRU)
+- [Observer Listener Multiple Place - Multiple Subscriber](#ObserverMultipleListener)
 
 ## Other
 - [Form the minimum number from the given sequence of characters.(Airtel)<br>
@@ -959,6 +962,9 @@ Triplets whose sum is zero -2+1+1==0<br>
 	}
 	
 ## BindService
+## LocalBrodcastReceiver
+## LRU
+## ObserverMultipleListener
 ## DIDILogic
 ## 3_5LiterWaterPuzzle
 ## SpiderWebPuzzle
