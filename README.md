@@ -59,6 +59,7 @@ B) Java**
 - [Find mid element in Linked List](#MidElementInLinkedList)
 - [Find last nth element in Linked list](#LastNthItemInLinkedList)
 - [Get length of Linked list](#GetLengthOfLinkedList)
+- [Sort Linked list](#SortLinkedList)
 
 ## Stack
 - [Implement a stack using queues **(Airtel)**](#ImplementStackUsingQueues)
@@ -862,6 +863,8 @@ Triplets whose sum is zero -2+1+1==0<br>
     }
 ## LastNthItemInLinkedList
 ## GetLengthOfLinkedList
+## SortLinkedList
+
 
 ## ImplementStackUsingQueues
 **Step 1 : Push()<br>1) x element add into queue<br>2) q1.add(q1.remove()); untill size-1 queue**
