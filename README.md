@@ -30,22 +30,24 @@ B) Java**
 - [Star pyramid program](#StarPattern)
 - [Count number of zeros in array(logN)](#CountNumberOfZero)
 - [Check Leap year](#CheckLeapYear)
+<br><br><br>
 - [Seperate o's, 1's and 2's in array **(HCL)**](#Seperate012)
 - [Intersection of two arrays **(Paytm)**](#IntersetionTwoArray)
 - [Union of two arrays **(Paytm)**](#UnionTwoArray)
 - [Intersection of three arrays **(Paytm)**](#IntersetionThreeArray)
 - [Union of three arrays **(Paytm)**](#UnionThreeArray)
+- [Add two large string **(Paytm)**](#AddTwoLargeString)
+- [Find the length of the longest sequence of consecutive numbers ](#LargeConsecutiveNumbersRange)**O(N) like :<br>I/P->(1,9,3,10,4,20,2) <br>O/P->4(1,2,3,4)**
+- [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
+<br><br><br>
 - [Find element in array (logN)](#FindElementInArray) 
 - [Find length of repeated characters like :](#RepeatedCharacters)<br>**I/P->(aaabbbcdddaa)<br>O/P->(a3b3cd3a2)<br>
 	if character is available single time then enter character without it's value**
-- [Add two large string **(Paytm)**](#AddTwoLargeString)
-- [Find the length of the longest sequence of consecutive numbers ](#LargeConsecutiveNumbersRange)**O(N) like :<br>I/P->(1,9,3,10,4,20,2) <br>O/P->4(1,2,3,4)**
 - [Convert snake case string into camel case **(Nagarro)**](#SnakeCaseIntoCamelCase)**<br>I/P->(my_test) <br>O/P ->(myTest)**
 - [Convert camel case string into snake case **(Nagarro)**](#CamelCaseIntoSnakeCase)**<br>I/P->(myTest) <br>O/P ->(my_test)**
 - [Merge sorted two array(M+N)](#MergeSortedTwoArray)
 - [Create Dynamic Array as like arraylist using array](#CreateDynamicArray)
 - [Count frequency of give digits(1) in number ](#CountFrequencyGivenOfDigit)**like :<br>I/P-10111213 <br>find 1 O/P-(5)**
-- [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
 - [Shuffle deck of cards](#ShuffleDeckOfCards)
 - [Sort array (N)](#SortArray)
 - [Binary search](#BinarySearch)
