@@ -864,28 +864,29 @@ Triplets whose sum is zero -2+1+1==0<br>
 ## LastNthItemInLinkedList
 ## GetLengthOfLinkedList
 ## SortLinkedList
-  public void sortList(Node head){
-        Node current = head; 
-		Node index = null;
-        int temp; 
-        if (head == null) {
-            return;
-        }
-        else {
-            while (current != null) {
-                index = current.next; 
-                while (index != null) {
-                    if (current.data > index.data) {
-                        temp = current.data;
-                        current.data = index.data;
-                        index.data = temp;
-                    }
-					index = index.next;
-                }
-                current = current.next;
-            }
-        }
-    }
+	  public void sortList(Node head){
+			Node current = head; 
+			Node index = null;
+			int temp; 
+			if (head == null) {
+				return;
+			}
+			else {
+				while (current != null) {
+					index = current.next; 
+					while (index != null) {
+						if (current.data > index.data) {
+							temp = current.data;
+							current.data = index.data;
+							index.data = temp;
+						}
+						index = index.next;
+					}
+					current = current.next;
+				}
+			}
+		}
+
 
 ## ImplementStackUsingQueues
 **Step 1 : Push()<br>1) x element add into queue<br>2) q1.add(q1.remove()); untill size-1 queue**
