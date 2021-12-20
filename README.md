@@ -89,6 +89,7 @@ B) Java**
 ## Puzzle
 - [The 3 & 5 Litre Die Hard Water Puzzle](#3_5LiterWaterPuzzle)
 - [Spider web puzzle](#SpiderWebPuzzle)
+- [Three Bulbs And Three Switches Puzzle](#BlubAndSwitchPuzzle)
 
 ## PrimeNumber
 
@@ -1018,6 +1019,7 @@ Triplets whose sum is zero -2+1+1==0<br>
 ## DIDILogic
 ## 3_5LiterWaterPuzzle
 ## SpiderWebPuzzle
+## BlubAndSwitchPuzzle
 
 
 
