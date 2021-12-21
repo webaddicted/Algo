@@ -892,6 +892,18 @@ Triplets whose sum is zero -2+1+1==0<br>
 
 **Hexadecimal Sum : C8**
 
+    public static void hexadecimalSum(String N, String k) {
+        String str1 = "AD";
+        String str2 = "1B";
+        long one = Long.parseLong(str1, 16);
+        long two = Long.parseLong(str2, 16);
+        long longSum = one + two;
+        String result = Long.toHexString(longSum);
+        System.out.print("Hexadecimal Sum : " + result);
+    }
+ 
+**Hexadecimal Sum : C8**
+
 ## ReverseLinkedList
     void reverseLinkedList(Node node) {
         Node pre = null;
