@@ -924,33 +924,33 @@ Triplets whose sum is zero -2+1+1==0<br>
 
 ## MaximumConsecutiveOnesIfKFlipAllowed
 
-		int maxConsecutiveCount() {
-		  var arr = [1, 1, 0, 0, 0, 1, 0, 0, 1, 1];
-		  var k = 2;
-		  var zeroCount = 0;
-		  var start = 0;
-		  var maxConsecutiveCount = 0;
-		  for (int i = 0; i < arr.length; i++) {
-			if (arr[i] == 0) {
-			  zeroCount++;
-			}
-
-			while (zeroCount > k) {
-			  if (arr[start] == 0) {
-				zeroCount--;
-			  }
-			  start++;
-			}
-			var countSum = i - start + 1;
-			print("$countSum  $maxCoun");
-			if (countSum > maxConsecutiveCount) {
-			  maxConsecutiveCount = countSum;
-			} else {
-			  maxConsecutiveCount = maxConsecutiveCount;
-			}
-		  }
-		  return maxConsecutiveCount;
+	int maxConsecutiveCount() {
+	  var arr = [1, 1, 0, 0, 0, 1, 0, 0, 1, 1];
+	  var k = 2;
+	  var zeroCount = 0;
+	  var start = 0;
+	  var maxConsecutiveCount = 0;
+	  for (int i = 0; i < arr.length; i++) {
+		if (arr[i] == 0) {
+		  zeroCount++;
 		}
+
+		while (zeroCount > k) {
+		  if (arr[start] == 0) {
+			zeroCount--;
+		  }
+		  start++;
+		}
+		var countSum = i - start + 1;
+		print("$countSum  $maxCoun");
+		if (countSum > maxConsecutiveCount) {
+		  maxConsecutiveCount = countSum;
+		} else {
+		  maxConsecutiveCount = maxConsecutiveCount;
+		}
+	  }
+	  return maxConsecutiveCount;
+	}
 
 **I/P -> arr = {1, 1, 0, 0, 0, 1, 0, 0, 1, 1}<br>**
 **O/P -> Max Consecutive Count : 5**
