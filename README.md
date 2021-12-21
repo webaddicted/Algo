@@ -40,6 +40,7 @@ B) Java**
 - [Find the length of the longest sequence of consecutive numbers ](#LargeConsecutiveNumbersRange)**O(N) like :<br>I/P->(1,9,3,10,4,20,2) <br>O/P->4(1,2,3,4)**
 - [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
 - [Add Two Hexadecimal Numbers](#AddTwoHexadecimalNumbers)
+- [Modulus Of Two Hexadecimal Numbers](#ModulusTwoHexadecimalNumbers)
 <br><br><br>
 - [Find element in array (logN)](#FindElementInArray) 
 - [Find length of repeated characters like :](#RepeatedCharacters)<br>**I/P->(aaabbbcdddaa)<br>O/P->(a3b3cd3a2)<br>
@@ -892,6 +893,8 @@ Triplets whose sum is zero -2+1+1==0<br>
 
 **Hexadecimal Sum : C8**
 
+## AddTwoHexadecimalNumbers
+
     public static void hexadecimalSum(String N, String k) {
         String str1 = "AD";
         String str2 = "1B";
@@ -902,7 +905,21 @@ Triplets whose sum is zero -2+1+1==0<br>
         System.out.print("Hexadecimal Sum : " + result);
     }
  
-**Hexadecimal Sum : C8**
+**Hexadecimal Sum : AD + 1B = C8**
+
+## ModulusTwoHexadecimalNumbers
+
+    public static void hexadecimalModulus() {
+        String str1 = "3E8";
+        String str2 = "13";
+        long one = Long.parseLong(str1, 16);
+        long two = Long.parseLong(str2, 16);
+        long longSum = one % two;
+        String result = Long.toHexString(longSum);
+        Log.d("TAG", "Hexadecimal Sum : " + result);
+    }
+
+**Hexadecimal Modulus : 3E8 % 13 = C**
 
 ## ReverseLinkedList
     void reverseLinkedList(Node node) {
