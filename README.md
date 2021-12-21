@@ -41,6 +41,7 @@ B) Java**
 - [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
 - [Add Two Hexadecimal Numbers](#AddTwoHexadecimalNumbers)
 - [Modulus Of Two Hexadecimal Numbers](#ModulusTwoHexadecimalNumbers)
+- [Maximum Consecutive Ones III (If K 0's Flip is Allowed)](#MaximumConsecutiveOnesIfKFlipAllowed)
 <br><br><br>
 - [Find element in array (logN)](#FindElementInArray) 
 - [Find length of repeated characters like :](#RepeatedCharacters)<br>**I/P->(aaabbbcdddaa)<br>O/P->(a3b3cd3a2)<br>
@@ -920,6 +921,39 @@ Triplets whose sum is zero -2+1+1==0<br>
     }
 
 **Hexadecimal Modulus : 3E8 % 13 = C**
+
+## MaximumConsecutiveOnesIfKFlipAllowed
+
+int maxConsecutiveCount() {
+  var arr = [1, 1, 0, 0, 0, 1, 0, 0, 1, 1];
+  var k = 2;
+  var zeroCount = 0;
+  var start = 0;
+  var maxConsecutiveCount = 0;
+  for (int i = 0; i < arr.length; i++) {
+    if (arr[i] == 0) {
+      zeroCount++;
+    }
+
+    while (zeroCount > k) {
+      if (arr[start] == 0) {
+        zeroCount--;
+      }
+      start++;
+    }
+    var countSum = i - start + 1;
+    print("$countSum  $maxCoun");
+    if (countSum > maxConsecutiveCount) {
+      maxConsecutiveCount = countSum;
+    } else {
+      maxConsecutiveCount = maxConsecutiveCount;
+    }
+  }
+  return maxConsecutiveCount;
+}
+
+**I/P -> arr = {1, 1, 0, 0, 0, 1, 0, 0, 1, 1}<br>**
+**O/P -> Max Consecutive Count : 5 **
 
 ## ReverseLinkedList
     void reverseLinkedList(Node node) {
