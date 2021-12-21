@@ -39,6 +39,7 @@ B) Java**
 - [Add two large string **(Paytm)**](#AddTwoLargeString)
 - [Find the length of the longest sequence of consecutive numbers ](#LargeConsecutiveNumbersRange)**O(N) like :<br>I/P->(1,9,3,10,4,20,2) <br>O/P->4(1,2,3,4)**
 - [Find pivot index in array whose left array sum equal to right array sum](#FindPivotIndexInArray)
+- [Add Two Hexadecimal Numbers](#AddTwoHexadecimalNumbers)
 <br><br><br>
 - [Find element in array (logN)](#FindElementInArray) 
 - [Find length of repeated characters like :](#RepeatedCharacters)<br>**I/P->(aaabbbcdddaa)<br>O/P->(a3b3cd3a2)<br>
@@ -833,6 +834,63 @@ Triplets whose sum is zero 2+-1+-1==0<br>
 Triplets whose sum is zero -1+2+-1==0<br>
 Triplets whose sum is zero -1+-1+2==0<br>
 Triplets whose sum is zero -2+1+1==0<br>
+
+## AddTwoHexadecimalNumbers
+	void hexadecimalSum() {
+	  var str1 = "AD";
+	  var str2 = "1B";
+	  Map<String, int> map = Map();
+	  map["0"] = 0;
+	  map["1"] = 1;
+	  map["2"] = 2;
+	  map["3"] = 3;
+	  map["4"] = 4;
+	  map["5"] = 5;
+	  map["6"] = 6;
+	  map["7"] = 7;
+	  map["8"] = 8;
+	  map["9"] = 9;
+	  map["A"] = 10;
+	  map["B"] = 11;
+	  map["C"] = 12;
+	  map["D"] = 13;
+	  map["E"] = 14;
+	  map["F"] = 15;
+	  Map<int, String> map1 = Map();
+	  map1[0] = "0";
+	  map1[1] = "1";
+	  map1[2] = "2";
+	  map1[3] = "3";
+	  map1[4] = "4";
+	  map1[5] = "5";
+	  map1[6] = "6";
+	  map1[7] = "7";
+	  map1[8] = "8";
+	  map1[9] = "9";
+	  map1[10] = "A";
+	  map1[11] = "B";
+	  map1[12] = "C";
+	  map1[13] = "D";
+	  map1[14] = "E";
+	  map1[15] = "F";
+	  var carry = 0;
+	  var totalSum = '';
+	  for (int i = 0; i < str1.length; i++) {
+		var lastIndex = str1.length - 1 - i;
+		var sum = map[str1[lastIndex]]! + map[str2[lastIndex]]! + carry;
+		if (sum > 15) {
+		  var restAmount = sum - 16;
+		  carry = 1;
+		  totalSum = "${map1[restAmount]}$totalSum";
+		} else {
+		  carry = 0;
+		  totalSum = "${map1[sum]}$totalSum";
+		}
+	  }
+	  print("Hexadecimal Sum : $totalSum");
+	}
+
+**Hexadecimal Sum : C8**
 
 ## ReverseLinkedList
     void reverseLinkedList(Node node) {
