@@ -429,7 +429,6 @@ B) Java**
 
 **I/P -><br>
 arr1 = [0, 0, 2, 2, 1, 0, 1]<br>**
-
 **O/P -> Print : [0, 0, 0, 1, 1, 2, 2]**
 
 ## IntersetionTwoArray
@@ -993,6 +992,7 @@ Triplets whose sum is zero -2+1+1==0<br>
         node = pre;
         return node;
     }
+    
 ## ReverseLinkedListInPair
 
 ## MidElementInLinkedList
