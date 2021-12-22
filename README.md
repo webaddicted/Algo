@@ -582,12 +582,15 @@ arr3 = {1, 3, 5}**
 		   int j = arr[i];
 		   while(setValue.contains(j)){
 			 j++;
+			 print("values are : ${j-1}");
 			 if((j - arr[i])>ans)ans = j - arr[i];
 		   }
 		 }
 	   }
 	  print("Range is : $ans");
 	}
+**values are : 5,6,7,8<br>	
+Range is : 0**
 
 ## SnakeCaseIntoCamelCase
 	void camelCaseString() {
