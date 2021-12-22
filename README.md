@@ -392,22 +392,45 @@ B) Java**
 **O/P -> 2020 is not leap year**
 
 ## Seperate012
-	void addString(String s1, String s2) {
-	  int carry = 0;
-	  var totalSum = "";
-	  for (int i = 0; i < s1.length; i++) {
-		var lastPos = s1.length - 1 - i;
-		var sum = (int.parse(s1[lastPos]) + int.parse(s2[lastPos])).toString();
-		if (sum.length > 1) {
-		  totalSum = (int.parse(sum[1]) + carry).toString() + totalSum;
-		  carry = int.parse(sum[0]);
-		} else {
-		  totalSum = (int.parse(sum) + carry).toString() + totalSum;
-		  carry = 0;
+	void seperate012() {
+	  var arr = [0, 0, 2, 2, 1, 0, 1];
+	  var li = 0;
+	  var mid = 0;
+	  var hi = arr.length - 1;
+	  var temp = 0;
+	  while (mid <= hi) {
+		switch (arr[mid]) {
+		  case 0:
+			{
+			  temp = arr[li];
+			  arr[li] = arr[mid];
+			  arr[mid] = temp;
+			  li++;
+			  mid++;
+			  break;
+			}
+		  case 1:
+			{
+			  mid++;
+			  break;
+			}
+		  case 2:
+			{
+			  temp = arr[hi];
+			  arr[hi] = arr[mid];
+			  arr[mid] = temp;
+			  hi--;
+			  break;
+			}
 		}
 	  }
-	  print("${totalSum}");
+	  print("Print : $arr");
 	}
+
+**I/P -><br>
+arr1 = [0, 0, 2, 2, 1, 0, 1]<br>**
+
+**O/P -> Print : [0, 0, 0, 1, 1, 2, 2]**
 
 ## IntersetionTwoArray
 	void printIntersection() {
