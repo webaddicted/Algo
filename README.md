@@ -264,6 +264,27 @@ B) Java**
 	  }
 	}
 
+    void duplicateElement() {
+        var array = [1, 2, 3, 2, 5, 5];
+        Map<int, int> map = Map();
+        for (int i = 0; i < array.length; i++) {
+            if (map.containsKey(array[i])) {
+                map[array[i]] = map[array[i]] !+1;
+            } else {
+                map[array[i]] = 1;
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            if (map.containsKey(array[i]) && map[array[i]] ! > 1){
+                print("Duplicate Element : ${array[i]} - ${map[array[i]]}");
+            }
+        }
+    }
+**Duplicate Element : 2 - 2<br>
+Duplicate Element : 2 - 2<br>
+Duplicate Element : 5 - 2<br>
+Duplicate Element : 5 - 2**
+
 ## SecondLargestNumber
 	void secLargestNumber() {
 	  var array = [1, 2, 3, 2, 5, 5];
