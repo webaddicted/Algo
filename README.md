@@ -1383,8 +1383,12 @@ Implement observer design pattern where user can subscribe catagory at multiple 
             }
         }
     }
+    
 ## DIDILogic
+
 ## 3_5LiterWaterPuzzle
+**Suppose you have a 3 liter jug and a 5 liter jug (this could also be in gallons). The jugs have no measurement lines on them either. How could you measure exactly 4 liter using only those jugs and as much extra water as you need?**
+
     - Fill the 3 litre can from the tap.
     - Empty the contents of the 3 litre can into the 5 litre can.
     - Fill the 3 litre can from the tap.
@@ -1394,9 +1398,25 @@ Implement observer design pattern where user can subscribe catagory at multiple 
     - Fill the 3 litre can from the tap.
     - Empty the contents of the 3 litre can into the 5 litre can.
     - Leaving 4 litres in the 5 litre can.
+    
 ## SpiderWebPuzzle
-## BlubAndSwitchPuzzle
+**A spider is trying to build a web for itself. It doubles the work done everyday.
+If the spider completely built the web in 15 days, how many days did it take for the spider to build 25% of the web ?**
 
+    - 13 days will take for 25% of the web.
+    - 15 Days for 100%
+    - 14 days for 50%
+    - 13 days for 25%
+    - 12 days for 12.5%
+
+## BlubAndSwitchPuzzle
+**There is a room with a door (closed) and three light bulbs. Outside the room, there are three switches, connected to the bulbs. You may manipulate the switches as you wish, but once you open the door you can’t change them. Identify each switch with its bulb. All bulbs are in working condition.**
+
+    Let the bulbs be X, Y, and Z
+    Turn on switch X for 5 to 10 minutes. Turn it off and turn on switch Y. Open the door and touch the light bulb.
+    1. the light is on from the bulb, it is Y Now we will check other two off bulbs
+    2. the bulb which is hot, it is X
+    3. the bulb which is cold, it is Z
 
 
 
