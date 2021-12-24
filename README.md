@@ -1250,6 +1250,34 @@ Triplets whose sum is zero -2+1+1==0<br>
     }
 
 ## LocalBrodcastReceiver
+**In Activity register, unregister receiver and event fire from service**
+
+    override fun onPause() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(mMessageReceiver)
+        super.onPause()
+    }
+
+    override fun onResume() {
+        LocalBroadcastManager.getInstance(this).registerReceiver(
+            mMessageReceiver, IntentFilter("custom-event-name")
+        )
+        super.onResume()
+    }
+
+    private val mMessageReceiver: BroadcastReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: Context, intent: Intent) {
+            val message = intent.getStringExtra("message")
+            Log.d("receiver", "Got message: $message")
+        }
+    }
+    
+    private fun sendMessage() {
+        Log.d("sender", "Broadcast Receiver : can call from service message")
+        val intent = Intent("custom-event-name")
+        intent.putExtra("message", "This is my message!")
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+    }
+    
 ## LRU
 ## ObserverMultipleListener
 ## DIDILogic
