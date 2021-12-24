@@ -1280,6 +1280,53 @@ Triplets whose sum is zero -2+1+1==0<br>
     
 ## LRU
 <!-- https://www.youtube.com/watch?v=N-GGrDK_Ev8 -->
+    class CacheData {
+    String imgUrlAsKey;
+    String bitmap;
+
+    CacheData(String imgUrlAsKey, String bitmap) {
+        this.imgUrlAsKey = imgUrlAsKey;
+        this.bitmap = bitmap;
+    }
+}
+
+    public class ImageCache {
+        Deque<CacheData> q = new LinkedList<>();
+        Map<String, CacheData> map = new HashMap<>();
+        int CACHE_SIZE = 3;
+    
+        public String getCacheImg(String imgUrlKey) {
+            if (map.containsKey(imgUrlKey)) {
+                CacheData data = map.get(imgUrlKey);
+                q.remove(data);
+                q.addFirst(data);
+                return data.bitmap;
+            }
+            return null;
+        }
+    
+        public void putImgInCache(String imgUrlKey, String bitmap) {
+            if (map.containsKey(imgUrlKey)) {
+                q.remove();
+            } else {
+                if (CACHE_SIZE == q.size()) {
+                    CacheData removeLast = q.removeLast();
+                    map.remove(removeLast.imgUrlAsKey);
+                }
+            }
+            CacheData data = new CacheData(imgUrlKey, bitmap);
+            q.addFirst(data);
+            map.put(imgUrlKey, data);
+        }
+    }
+    
+**ImageCache cache = new ImageCache();
+cache.putImgInCache("Img1", "Bitmap 1");
+cache.putImgInCache("Img2", "Bitmap 2");
+cache.putImgInCache("Img3", "Bitmap 3");
+cache.putImgInCache("Img4", "Bitmap 4");
+System.out.println(cache.getCacheImg("Img2"));
+System.out.println(cache.getCacheImg("Img3"));**
 
 ## ObserverMultipleListener
 ## DIDILogic
