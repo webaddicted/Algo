@@ -1385,6 +1385,15 @@ Implement observer design pattern where user can subscribe catagory at multiple 
     }
 ## DIDILogic
 ## 3_5LiterWaterPuzzle
+    - Fill the 3 litre can from the tap.
+    - Empty the contents of the 3 litre can into the 5 litre can.
+    - Fill the 3 litre can from the tap.
+    - Empty the contents of the 3 litre can into the 5 litre can. - Leaving the 5 litre can full and 1 litre in the 3 litre can.
+    - Pour away the contents of the 5 litre can
+    - Pour the 1 litre from the 3 litre can into the 5 litre can.
+    - Fill the 3 litre can from the tap.
+    - Empty the contents of the 3 litre can into the 5 litre can.
+    - Leaving 4 litres in the 5 litre can.
 ## SpiderWebPuzzle
 ## BlubAndSwitchPuzzle
 
