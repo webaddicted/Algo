@@ -1197,7 +1197,9 @@ Triplets whose sum is zero -2+1+1==0<br>
 	}
 	
 ## BindService
+
 **This service generate randam number and print in activity**
+
     class MyBoundService : Service() {
         val iBinder = MyBinder()
         val randomNumberLiveData: MutableLiveData<Int> = MutableLiveData()
