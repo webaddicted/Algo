@@ -1287,8 +1287,8 @@ Triplets whose sum is zero -2+1+1==0<br>
     CacheData(String imgUrlAsKey, String bitmap) {
         this.imgUrlAsKey = imgUrlAsKey;
         this.bitmap = bitmap;
-    }
-}
+      }
+   }
 
     public class ImageCache {
         Deque<CacheData> q = new LinkedList<>();
@@ -1320,12 +1320,12 @@ Triplets whose sum is zero -2+1+1==0<br>
         }
     }
     
-**ImageCache cache = new ImageCache();
-cache.putImgInCache("Img1", "Bitmap 1");
-cache.putImgInCache("Img2", "Bitmap 2");
-cache.putImgInCache("Img3", "Bitmap 3");
-cache.putImgInCache("Img4", "Bitmap 4");
-System.out.println(cache.getCacheImg("Img2"));
+**ImageCache cache = new ImageCache();<br>
+cache.putImgInCache("Img1", "Bitmap 1");<br>
+cache.putImgInCache("Img2", "Bitmap 2");<br>
+cache.putImgInCache("Img3", "Bitmap 3");<br>
+cache.putImgInCache("Img4", "Bitmap 4");<br>
+System.out.println(cache.getCacheImg("Img2"));<br>
 System.out.println(cache.getCacheImg("Img3"));**
 
 ## ObserverMultipleListener
