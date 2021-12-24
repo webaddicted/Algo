@@ -65,6 +65,7 @@ B) Java**
 - [Sort Linked list](#SortLinkedList)
 
 ## Stack
+- [Implement stack using array](#ImplementStackUsingArray)
 - [Implement a stack using queues **(Airtel)**](#ImplementStackUsingQueues)
 - [Reverse a stack](#ReverseStack)
 - [Check for Balanced Brackets in an expression (well-formedness) using Stack](#CheckBalancedBrackets)
@@ -1033,6 +1034,42 @@ Triplets whose sum is zero -2+1+1==0<br>
 		}
 	  }
 	}
+## ImplementStackUsingArray
+    class MyStack {
+        int[] arr;
+        int top;
+
+        MyStack(int size) {
+            arr = new int[size];
+            top = -1;
+        }
+
+        void push(int x) {
+            if (top >= arr.length) {
+                System.out.print("OverFlow");
+            } else {
+                arr[++top] = x;
+            }
+        }
+
+        int pop() {
+            if (top < 0) {
+                System.out.print("UnderFlow");
+                return -1;
+            } else {
+                return arr[top--];
+            }
+        }
+
+        int top() {
+            if (top < 0) {
+                System.out.print("UnderFlow");
+                return -1;
+            } else {
+                return arr[top];
+            }
+        }
+    }
 
 ## ImplementStackUsingQueues
 **Step 1 : Push()<br>1) x element add into queue<br>2) q1.add(q1.remove()); untill size-1 queue**
