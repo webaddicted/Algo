@@ -1287,8 +1287,8 @@ Triplets whose sum is zero -2+1+1==0<br>
     CacheData(String imgUrlAsKey, String bitmap) {
         this.imgUrlAsKey = imgUrlAsKey;
         this.bitmap = bitmap;
-      }
-   }
+       }
+    }
 
     public class ImageCache {
         Deque<CacheData> q = new LinkedList<>();
