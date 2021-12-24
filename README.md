@@ -1354,6 +1354,35 @@ System.out.println(cache.getCacheImg("Img2"));<br>
 System.out.println(cache.getCacheImg("Img3"));**
 
 ## ObserverMultipleListener
+Implement observer design pattern where user can subscribe catagory at multiple place.
+
+    public class EventManager {
+        Map<String, List<EventListener>> listeners = new HashMap<>();
+    // String key is type of subscriber, it could be category, details
+    // EventListener is list of interfaces, when screen is open then subscribe with listener
+        public EventManager(String... operations) {
+            for (String operation : operations) {
+                this.listeners.put(operation, new ArrayList<>());
+            }
+        }
+
+        public void subscribe(String eventType, EventListener listener) {
+            List<EventListener> users = listeners.get(eventType);
+            users.add(listener);
+        }
+
+        public void unsubscribe(String eventType, EventListener listener) {
+            List<EventListener> users = listeners.get(eventType);
+            users.remove(listener);
+        }
+
+        public void notify(String eventType, File file) {
+            List<EventListener> users = listeners.get(eventType);
+            for (EventListener listener : users) {
+                listener.update(eventType, file);
+            }
+        }
+    }
 ## DIDILogic
 ## 3_5LiterWaterPuzzle
 ## SpiderWebPuzzle
