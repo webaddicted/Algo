@@ -384,13 +384,13 @@ B) Java**
 ## CheckLeapYear
 	void isLeapYear() {
 	  var year = 2020;
-	  if ((year % 4 == 0) && (year % 400 != 0) && (year % 400 == 0)) {
+	  if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
 		print("$year is leap year");
 	  } else {
 		print("$year is not leap year");
 	  }
 	}
-**O/P -> 2020 is not leap year**
+**O/P -> 2020 is leap year**
 
 ## Seperate012
 	void seperate012() {
