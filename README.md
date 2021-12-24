@@ -263,6 +263,8 @@ B) Java**
 		}
 	  }
 	}
+	
+**Method - 2**
 
     void duplicateElement() {
         var array = [1, 2, 3, 2, 5, 5];
