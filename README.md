@@ -1197,6 +1197,56 @@ Triplets whose sum is zero -2+1+1==0<br>
 	}
 	
 ## BindService
+**This service generate randam number and print in activity**
+    class MyBoundService : Service() {
+        val iBinder = MyBinder()
+        val randomNumberLiveData: MutableLiveData<Int> = MutableLiveData()
+        override fun onBind(intent: Intent?): IBinder {
+            return iBinder
+        }
+    
+        override fun onCreate() {
+            super.onCreate()
+            Handler(Looper.getMainLooper()).postDelayed({
+                val randomNumber = Random().nextInt(100)
+                randomNumberLiveData.postValue(randomNumber)
+            }, 1000)
+        }
+    
+        inner class MyBinder : Binder() {
+            val service: MyBoundService get() = this@MyBoundService
+        }
+    }
+    
+**In Activity Create Connection which pass when service start**
+
+    private val serviceConnection = object : ServiceConnection {
+        override fun onServiceConnected(className: ComponentName, iBinder: IBinder) {
+            val binder = iBinder as MyBoundService.MyBinder
+            val mService = binder.service
+            mService.randomNumberLiveData.observe(this@MainActivity, Observer {
+                resultTextView?.text = "Random number from service: $it"
+            })
+        }
+
+        override fun onServiceDisconnected(arg0: ComponentName) {
+            Log.d("TAG", "ServiceConnection: disconnected from service.")
+            mIsBound = false
+        }
+    }
+    
+    private fun bindService() {
+        Intent(this, MyBoundService::class.java).also { intent ->
+            bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE)
+        }
+    }
+    
+    private fun unbindService() {
+        Intent(this, MyBoundService::class.java).also { intent ->
+            unbindService(serviceConnection)
+        }
+    }
+
 ## LocalBrodcastReceiver
 ## LRU
 ## ObserverMultipleListener
