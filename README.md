@@ -1034,6 +1034,7 @@ Triplets whose sum is zero -2+1+1==0<br>
 		}
 	  }
 	}
+	
 ## ImplementStackUsingArray
     class MyStack {
         int[] arr;
@@ -1072,6 +1073,7 @@ Triplets whose sum is zero -2+1+1==0<br>
     }
 
 ## ImplementStackUsingQueues
+<!-- https://www.youtube.com/watch?v=jDZQKzEtbYQ -->
 **Step 1 : Push()<br>1) x element add into queue<br>2) q1.add(q1.remove()); untill size-1 queue**
 
 	public class Test {
@@ -1163,7 +1165,7 @@ Triplets whose sum is zero -2+1+1==0<br>
 **Is Bracket Balance : false**
 
 ## ImplementQueuesUsingStack
-	
+<!-- https://www.youtube.com/watch?v=3Et9MrMc02A&t=156s -->
 **Step 1 : Push()<br>1) s1 transfer to s2<br>2) x value add to s1<br>3) s2 transfer to s1 back**
 
 	public class Test {
