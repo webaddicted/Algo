@@ -76,6 +76,8 @@ B) Java**
 ## Android
 - [Bind Service](#BindService)
 - [Local Broadcast Receiver](#LocalBrodcastReceiver)
+- [Retrofit API Call](#RetrofitAPICall)
+- [Room DB Migration](#RoomDBMigration)
 - [LRU - Least Recently Used Cache](#LRU)
 - [Observer Listener Multiple Place - Multiple Subscriber](#ObserverMultipleListener)
 
@@ -1302,7 +1304,10 @@ Triplets whose sum is zero -2+1+1==0<br>
         intent.putExtra("message", "This is my message!")
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
     }
-    
+## RetrofitAPICall
+
+## RoomDBMigration
+
 ## LRU
 <!-- https://www.youtube.com/watch?v=N-GGrDK_Ev8 -->
     class CacheData {
