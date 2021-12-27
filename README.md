@@ -1305,6 +1305,52 @@ Triplets whose sum is zero -2+1+1==0<br>
         LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
     }
 ## RetrofitAPICall
+        fun getRetrofit(@ApplicationContext context: Context): Retrofit {
+            return Retrofit.Builder()
+            .baseUrl(BuildConfig.BASE_URL)
+            .addCallAdapterFactory(CoroutineCallAdapterFactory())
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(provideOkHttpClient(context))
+            .build()
+         }
+
+        private fun provideOkHttpClient(context: Context): OkHttpClient {
+        val okHttpClientBuilder = OkHttpClient.Builder()
+        okHttpClientBuilder.connectTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
+        okHttpClientBuilder.readTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
+        okHttpClientBuilder.writeTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
+
+        val interceptor = HttpLoggingInterceptor()
+//        TODO print response
+        interceptor.level = HttpLoggingInterceptor.Level.BODY
+//        okHttpClientBuilder.addNetworkInterceptor(StethoInterceptor())
+//        if (BuildConfig.DEBUG)interceptor.level = HttpLoggingInterceptor.Level.BODY
+//        if (BuildConfig.DEBUG)okHttpClientBuilder.addNetworkInterceptor(StethoInterceptor())
+        okHttpClientBuilder.addInterceptor(interceptor)
+        okHttpClientBuilder.addInterceptor(TokenInterceptor())
+        val authenticator = TokenAuthenticator(context)
+        okHttpClientBuilder.authenticator(authenticator)
+        return okHttpClientBuilder.build()
+      }
+
+
+        RetrofitInstance.ApiServiceInterface().registration(
+                email.getText().toString().trim(),
+                password.getText().toString().trim(),
+                new Callback<SignUpResponse>() {
+                    @Override
+                    public void success(SignUpResponse signUpResponse, Response response) {
+                        // in this method we will get the response from API
+                        Toast.makeText(MainActivity.this, signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void failure(RetrofitError error) {
+                        // if error occurs in network transaction then we can get the error in this method.
+                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                    }
+                });
+
 
 ## RoomDBMigration
 
