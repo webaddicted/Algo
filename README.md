@@ -1315,23 +1315,24 @@ Triplets whose sum is zero -2+1+1==0<br>
          }
 
         private fun provideOkHttpClient(context: Context): OkHttpClient {
-        val okHttpClientBuilder = OkHttpClient.Builder()
-        okHttpClientBuilder.connectTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
-        okHttpClientBuilder.readTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
-        okHttpClientBuilder.writeTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
 
-        val interceptor = HttpLoggingInterceptor()
-//        TODO print response
-        interceptor.level = HttpLoggingInterceptor.Level.BODY
-//        okHttpClientBuilder.addNetworkInterceptor(StethoInterceptor())
-//        if (BuildConfig.DEBUG)interceptor.level = HttpLoggingInterceptor.Level.BODY
-//        if (BuildConfig.DEBUG)okHttpClientBuilder.addNetworkInterceptor(StethoInterceptor())
-        okHttpClientBuilder.addInterceptor(interceptor)
-        okHttpClientBuilder.addInterceptor(TokenInterceptor())
-        val authenticator = TokenAuthenticator(context)
-        okHttpClientBuilder.authenticator(authenticator)
-        return okHttpClientBuilder.build()
-      }
+	  val okHttpClientBuilder = OkHttpClient.Builder()
+          okHttpClientBuilder.connectTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
+          okHttpClientBuilder.readTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
+          okHttpClientBuilder.writeTimeout(ApiConstant.API_TIME_OUT, TimeUnit.SECONDS)
+
+          val interceptor = HttpLoggingInterceptor()
+	  //    TODO print response
+          interceptor.level = HttpLoggingInterceptor.Level.BODY
+	  //        okHttpClientBuilder.addNetworkInterceptor(StethoInterceptor())
+	  //        if (BuildConfig.DEBUG)interceptor.level = HttpLoggingInterceptor.Level.BODY
+	  //        if (BuildConfig.DEBUG)okHttpClientBuilder.addNetworkInterceptor(StethoInterceptor())
+          okHttpClientBuilder.addInterceptor(interceptor)
+          okHttpClientBuilder.addInterceptor(TokenInterceptor())
+          val authenticator = TokenAuthenticator(context)
+          okHttpClientBuilder.authenticator(authenticator)
+          return okHttpClientBuilder.build()
+        }
 
 
         RetrofitInstance.ApiServiceInterface().registration(
