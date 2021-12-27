@@ -1356,6 +1356,8 @@ Triplets whose sum is zero -2+1+1==0<br>
 
 ## RoomDBMigration
 **In case of fallbackToDestructiveMigration() it delete all table and create new one again.**
+
+
         Room.databaseBuilder(
             context,
             AppDatabase::class.java,//abstract class all DAO mention in this file
