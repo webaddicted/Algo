@@ -1355,7 +1355,31 @@ Triplets whose sum is zero -2+1+1==0<br>
 
 
 ## RoomDBMigration
+**In case of fallbackToDestructiveMigration() it delete all table and create new one again.**
+        Room.databaseBuilder(
+            context,
+            AppDatabase::class.java,//abstract class all DAO mention in this file
+            ApiConstant.DB_NAME
+        ).addMigrations(MIGRATION_1_2).build()
+	
+     private val MIGRATION_1_2: Migration = object : Migration(1, 2) {
+         override fun migrate(database: SupportSQLiteDatabase) {
+             database.execSQL(
+                """
+                CREATE TABLE commitmentSheet (
+                    id TEXT PRIMARY KEY NOT NULL,
+                    commitmentType TEXT NOT NULL,
+                    commitmentDetails TEXT NOT NULL,
+                    targetDate TEXT NOT NULL,
+                    signImg TEXT NOT NULL,
+                    isImgSynced INTEGER NOT NULL
+                 )
+                 """.trimIndent()
+             )
+         }
+     }
 
+	
 ## LRU
 <!-- https://www.youtube.com/watch?v=N-GGrDK_Ev8 -->
     class CacheData {
