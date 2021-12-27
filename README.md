@@ -1333,7 +1333,8 @@ Triplets whose sum is zero -2+1+1==0<br>
           okHttpClientBuilder.authenticator(authenticator)
           return okHttpClientBuilder.build()
         }
-
+	
+**Call Api from Activity/Fragment**
 
         RetrofitInstance.ApiServiceInterface().registration(
                 email.getText().toString().trim(),
