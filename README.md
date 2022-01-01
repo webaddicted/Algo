@@ -1023,7 +1023,19 @@ Triplets whose sum is zero -2+1+1==0<br>
     }
     
 ## ReverseLinkedListInPair
-
+    void reverseInPair() {
+        Node current = head;
+        while (current != null && current.next != null) {
+        //            Swap Data in pair
+            int temp = current.data;
+            current.data = current.next.data;
+            current.next.data = temp;
+            current = current.next.next;
+        }
+        Log.d("TAG", "Reverse Data in Pair");
+        display();
+    }
+    
 ## MidElementInLinkedList
     void findMidElement(Node node){
         Node slowPtr = node;
