@@ -9,6 +9,15 @@ B) Java**
 [Dart Online Platform](https://dartpad.dev/?)<br>
 [Java Online Platform](https://www.tutorialspoint.com/compile_java_online.php)**
 
+## Pending Task
+- [ ] Find unique pair in list whose sum is 5 (Uber)
+- [ ] Two linked list meet a point find that point like Y upper two arrow consider as linkedlist, and both list meet on a point find that point (Walmart) 
+- [ ] Reverse left linked list from mid and Reverse reverse linked list from mid like 1>2>3>4>5>6 O/p..3>2>1>6>5>4(Delhivery)
+- [ ] Merge two linkedlist
+- [ ] 2D/Matrix Array find Diagonal(Harman)
+- [ ] 2D/Matrix print from outerthen move to inner(Delhivery) 
+- [ ] UnionThreeArray
+- [ ] DIDILogic(Airtel)
 
 ## ArrayList
 - [Check Prime numbers](#PrimeNumber)
