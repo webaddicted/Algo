@@ -1057,6 +1057,29 @@ Triplets whose sum is zero -2+1+1==0<br>
 **O/P -> Mid Element - 4**
 
 ## LastNthItemInLinkedList
+**Method - 1<br>**
+In this method first calculate length of linkedlist and then find element
+    void printNthFromLast(Node head, int n) {
+        Node current  = head;
+        int lengthOfList  = 0;
+        while (current!=null){
+            lengthOfList++;
+            current = current.next;
+        }
+        current  = head;
+        int currentCount = 0;
+        while (current!=null){
+            if((lengthOfList-currentCount)==n){
+                Log.d("TAG", "Last "+n+" item is : " + current.data);
+                break;
+            }else {
+                currentCount++;
+            }
+            current = current.next;
+        }
+    }
+
+**Method - 1<br>**
 
 ## GetLengthOfLinkedList
     void getLength() {
