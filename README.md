@@ -1007,23 +1007,33 @@ Triplets whose sum is zero -2+1+1==0<br>
 **O/P -> Max Consecutive Count : 5**
 
 ## ReverseLinkedList
-    void reverseLinkedList(Node node) {
+    void reverseLinkedList(Node head) {
+        //        1>2>3>4
         Node pre = null;
-        Node current = node;
+        Node current = head;
         Node next = null;
-
         while (current != null) {
-            next = current.next;
-            current.next = pre;
-            pre = current;
-            current = next;
+            next = current.next;//2
+            current.next = pre;//null
+            pre = current;//1
+            current = next;//2
         }
-        node = pre;
-        return node;
+        head = pre;
+        Log.d("TAG", "Reverse Linked List : ");
+        display();
+        //        In this way we reverse pointer
+        //        after every iteration current and next move at next position
+
+        //       List - 1>2>3>4
+        //       After 1st Iteration- null>1, 2>3>4
+        //        After 2st Iteration- null<1<2, 3>4
+        //        After 3st Iteration- null<1<2<3, 4
+        //        After 4st Iteration- null<1<2<3<4
+        //        finally O/P :  4>3>2>1>null
     }
 
-**I/P -> list = 1>2>3>4>5>6<br>**
-**O/P -> list = 6>5>4>3>2>1**
+**I/P -> list = 1>2>3>4<br>**
+**O/P -> list = 4>3>2>1**
     
 ## ReverseLinkedListInPair
     void reverseInPair() {
