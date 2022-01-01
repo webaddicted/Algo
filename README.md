@@ -1021,6 +1021,9 @@ Triplets whose sum is zero -2+1+1==0<br>
         node = pre;
         return node;
     }
+
+**I/P -> list = 1>2>3>4>5>6<br>**
+**O/P -> list = 6>5>4>3>2>1**
     
 ## ReverseLinkedListInPair
     void reverseInPair() {
@@ -1035,7 +1038,10 @@ Triplets whose sum is zero -2+1+1==0<br>
         Log.d("TAG", "Reverse Data in Pair");
         display();
     }
-    
+
+**I/P -> list = 1>2>3>4>5>6<br>**
+**O/P -> list = 2>1>4>3>6>5**
+        
 ## MidElementInLinkedList
     void findMidElement(Node node){
         Node slowPtr = node;
@@ -1047,8 +1053,25 @@ Triplets whose sum is zero -2+1+1==0<br>
         }
         print("Mid element ${slowPtr.data}");
     }
+**I/P -> list = 1>2>3>4>5>6>7<br>**
+**O/P -> Mid Element - 4**
+
 ## LastNthItemInLinkedList
+
 ## GetLengthOfLinkedList
+    void getLength() {
+        Node current = head;
+        int count = 0;
+        while (current != null) {
+            current = current.next;
+            count++;
+        }
+        Log.d("TAG", "Size of LinkedList : " + count);
+        Log.d("TAG", ".");
+    }
+**I/P -> list = 1>2>3>4>5>6>7<br>**
+**O/P -> Size of LinkedList : 7**
+    
 ## SortLinkedList
 	void sortList(Node head) {
 	  Node current = head;
