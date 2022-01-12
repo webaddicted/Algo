@@ -983,7 +983,7 @@ Triplets whose sum is zero -2+1+1==0<br>
 **Hexadecimal Modulus : 3E8 % 13 = C**
 
 ## MaximumConsecutiveOnesIfKFlipAllowed
-
+<!-- https://www.youtube.com/watch?v=TAMLsfGiyOg -->
 	int maxConsecutiveCount() {
 	  var arr = [1, 1, 0, 0, 0, 1, 0, 0, 1, 1];
 	  var k = 2;
