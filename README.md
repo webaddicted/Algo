@@ -15,7 +15,7 @@ B) Java**
 - [ ] Reverse left linked list from mid and Reverse reverse linked list from mid like 1>2>3>4>5>6 O/p..3>2>1>6>5>4(Delhivery)
 - [ ] Merge two linkedlist
 - [ ] 2D/Matrix Array find Diagonal(Harman)
-- [ ] 2D/Matrix print from outerthen move to inner(Delhivery) 
+- [ ] 2D/Matrix print from outer then move to inner (Array in spiral order) (Delhivery) 
 - [ ] UnionThreeArray
 - [ ] DIDILogic(Airtel)
 
