@@ -106,6 +106,7 @@ B) Java**
 - [The 3 & 5 Litre Die Hard Water Puzzle](#3_5LiterWaterPuzzle)
 - [Spider web puzzle](#SpiderWebPuzzle)
 - [Three Bulbs And Three Switches Puzzle](#BlubAndSwitchPuzzle)
+- [How will you measure 9 hours from two hourglasses of 7 hours and 4 hours?](#Hourglass9MintMeasure)
 
 ## PrimeNumber
 
@@ -1603,6 +1604,9 @@ If the spider completely built the web in 15 days, how many days did it take for
     2. the bulb which is hot, it is X
     3. the bulb which is cold, it is Z
 
+## Hourglass9MintMeasure
 
+		When the 4-min timer is empty for the second time, the 7-min timer has 1 minute worth of sand in the bottom half.
+		Flip it over so there is now 1 minute in the top. When the 7-min timer empties, 9 minutes have elapsed.
 
 
