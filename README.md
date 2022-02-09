@@ -66,6 +66,11 @@ B) Java**
 - [Binary search](#BinarySearch)
 - [Find all triplets with zero sum **(Paytm)**](#FindAllTripletWithZeroSum)
 
+
+## 2D Array / Matrix
+- [Diagonals sums of a matrix](#DiagonalsSums)
+
+
 ## Linked list
 - [Reverse Linked list](#ReverseLinkedList)
 - [Reverse Linked list in pair **(Paytm)** ](#ReverseLinkedListInPair) **like : <br>I/P->(1-2-3-4-5) <br>O/P->(2-1-4-3-5)**
@@ -1016,6 +1021,31 @@ Triplets whose sum is zero -2+1+1==0<br>
 
 **I/P -> arr = {1, 1, 0, 0, 0, 1, 0, 0, 1, 1}<br>**
 **O/P -> Max Consecutive Count : 5**
+
+
+## DiagonalsSums
+
+    static void printDiagonalSums(int [][]array){
+        int n = array.length;
+        int principal = 0, secondary = 0;
+        for (int i = 0; i < n; i++) {
+            principal = array[i][i] + principal;
+            secondary = array[i][n - i - 1] + secondary;
+        }
+        System.out.println("Principal Diagonal:" + principal);
+        System.out.println("Secondary Diagonal:" + secondary);
+    }
+    
+**Input : 
+1 2 3 4
+4 3 2 1
+7 8 9 6
+6 5 4 3
+Output :
+Principal Diagonal: 16
+Secondary Diagonal: 20**    
+
+
 
 ## ReverseLinkedList
     void reverseLinkedList(Node head) {
