@@ -1036,14 +1036,14 @@ Triplets whose sum is zero -2+1+1==0<br>
         System.out.println("Secondary Diagonal:" + secondary);
     }
     
-**Input : 
-1 2 3 4
-4 3 2 1
-7 8 9 6
-6 5 4 3
-Output :
-Principal Diagonal: 16
-Secondary Diagonal: 20**    
+**Input : <br>
+1 2 3 4<br>
+4 3 2 1<br>
+7 8 9 6<br>
+6 5 4 3<br>
+Output :<br>
+Principal Diagonal: 16<br>
+Secondary Diagonal: 20**<br>    
 
 
 
