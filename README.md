@@ -69,7 +69,7 @@ B) Java**
 
 ## 2D Array / Matrix
 - [Diagonals sums of a matrix](#DiagonalsSums)
-- [Find transpose of a matrix(Make Row as column)](#FindTransposeMatrix)
+- [Find transpose of a matrix (Make Row as column)](#FindTransposeMatrix)
 
 ## Linked list
 - [Reverse Linked list](#ReverseLinkedList)
