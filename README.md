@@ -69,7 +69,7 @@ B) Java**
 
 ## 2D Array / Matrix
 - [Diagonals sums of a matrix](#DiagonalsSums)
-
+- [Find transpose of a matrix(Make Row as column)](#FindTransposeMatrix)
 
 ## Linked list
 - [Reverse Linked list](#ReverseLinkedList)
@@ -1045,7 +1045,24 @@ Output :<br>
 Principal Diagonal: 16<br>
 Secondary Diagonal: 20**<br>    
 
+## FindTransposeMatrix
 
+    static void transpose(int a[][],int b[][]) {
+        int i, j;
+        int n = a.length;
+        for (i = 0; i < n; i++)
+            for (j = 0; j < n; j++)
+                b[i][j] = a[j][i];
+    }
+
+**Input : <br>
+1 2 3 <br>
+4 5 6 <br>
+7 8 9<br>
+Output :<br>
+1 4 7 <br>
+2 5 8 <br>
+3 6 9<br>**
 
 ## ReverseLinkedList
     void reverseLinkedList(Node head) {
