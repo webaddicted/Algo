@@ -431,6 +431,12 @@ Duplicate Element : 5 - 2**
 		print("$year is not leap year");
 	  }
 	}
+	
+	if year is divisible by 400 then is_leap_year
+	else if year is divisible by 100 then not_leap_year
+	else if year is divisible by 4 then is_leap_year
+	else not_leap_year
+
 **O/P -> 2020 is leap year**
 
 ## Seperate012
