@@ -34,6 +34,7 @@ B) Java**
 - [Find second largest number in array](#SecondLargestNumber)
 - [Find second smallest number in array](#SecondSmallestNumber)
 - [Find subarray with given sum](#SubArrayOfGivenSum)
+- [Find SubArray with GivenSum in Sorted Array](#SubArrayOfSortedArray)
 - [Find repeated substring in given paragraph](#RepeatedSubStringInParagraph)
 - [Reverse array](#ReverseArray) 
 - [Reverse same array](#ReverseSameArray) 
@@ -356,6 +357,37 @@ Duplicate Element : 5 - 2**
 		}
 	  }
 	}
+
+## SubArrayOfSortedArray
+
+    public static void findPairInSorted(int[] nums, int target) {
+        // array is not sorted then First sort then find pair
+	//        Arrays.sort(nums);
+        int low = 0;
+        int high = nums.length - 1;
+        while (low < high) {
+            // sum found
+            if (nums[low] + nums[high] == target) {
+                System.out.println("Pair found (" + nums[low] + "," +
+                        nums[high] + ")");
+                return;
+            }
+            // increment `low` index if the total is less than the desired sum;
+            // decrement `high` index if the total is more than the desired sum
+            if (nums[low] + nums[high] < target) {
+                low++;
+            } else {
+                high--;
+            }
+        }
+        // we reach here if the pair is not found
+        System.out.println("Pair not found");
+    }
+
+**int[] nums = { 8, 7, 2, 5, 3, 1 };<br>
+int target = 10;<br>
+Pair found (2, 8)**
+
 
 ## RepeatedSubStringInParagraph
 	void repeatedString() {
