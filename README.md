@@ -64,7 +64,7 @@ B) Java**
 - [Shuffle deck of cards](#ShuffleDeckOfCards)
 - [Sort array (N)](#SortArray)
 - [Binary search](#BinarySearch)
-- [Merge Sort](#MergeSort)**nLog(N)**
+- [Merge Sort](#MergeSort) **nLog(N)**
 - [Find all triplets with zero sum **(Paytm)**](#FindAllTripletWithZeroSum)
 
 
