@@ -64,6 +64,7 @@ B) Java**
 - [Shuffle deck of cards](#ShuffleDeckOfCards)
 - [Sort array (N)](#SortArray)
 - [Binary search](#BinarySearch)
+- [Merge Sort](#MergeSort)**nLog(N)**
 - [Find all triplets with zero sum **(Paytm)**](#FindAllTripletWithZeroSum)
 
 
@@ -889,6 +890,68 @@ Remove 1 : {1,3}
 	}
 **I/P -> arr = {1, 2, 3, 4, 5, 6, 7}<br>**
 **O/P -> Item 2 find at Index 1**
+
+## MergeSort
+
+    static int array[] = {5, 7, 6, 4, 1, 2, 3};
+
+    public static void mergeSortData() {
+        divide(0, array.length - 1);
+    }
+
+    // Recursive algorithm for merge sort
+    public static void divide(int start, int end) {
+        int mid = (start + end) / 2;
+        if (start < end) {
+            // divide left half
+            divide(start, mid);
+            // divide right half
+            divide(mid + 1, end);
+            // Merge left and right half
+            merge(start, mid, end);
+        }
+    }
+
+    private static void merge(int start, int mid, int end) {
+        // Initializing temp array and index
+        int[] tempArray = new int[array.length];
+        int tempArrayIndex = start;
+        int startIndex = start;
+        int midIndex = mid + 1;
+
+        // It will iterate until smaller list reaches to the end
+        while (startIndex <= mid && midIndex <= end) {
+            if (array[startIndex] < array[midIndex]) {
+                tempArray[tempArrayIndex++] = array[startIndex++];
+            } else {
+                tempArray[tempArrayIndex++] = array[midIndex++];
+            }
+        }
+        // Copy remaining elements
+        while (startIndex <= mid) {
+            tempArray[tempArrayIndex++] = array[startIndex++];
+        }
+        while (midIndex <= end) {
+            tempArray[tempArrayIndex++] = array[midIndex++];
+        }
+        // Temp array is sorted array & array is origional array
+        // now copy temp array into array
+        for (int i = start; i <= end; i++) {
+            array[i] = tempArray[i];
+        }
+
+        Log.d("TAG", "After merging:   ");
+        printArray(tempArray, start, end);
+        System.out.println();
+    }
+
+    public static void printArray(int arr[], int start, int end) {
+        for (int i = 0; i < arr.length; i++) {
+            Log.d("TAG", "Sorted : " + arr[i] + " ");
+        }
+        System.out.println();
+    }
+
 
 ## FindAllTripletWithZeroSum
 	void findTriplets() {
