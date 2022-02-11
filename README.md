@@ -14,7 +14,6 @@ B) Java**
 - [ ] Two linked list meet a point find that point like Y upper two arrow consider as linkedlist, and both list meet on a point find that point (Walmart) 
 - [ ] Reverse left linked list from mid and Reverse reverse linked list from mid like 1>2>3>4>5>6 O/p..3>2>1>6>5>4(Delhivery)
 - [ ] Merge two linkedlist
-- [ ] 2D/Matrix Array find Diagonal(Harman)
 <!-- https://www.youtube.com/watch?v=siKFOI8PNKM -->
 - [ ] 2D/Matrix print from outer then move to inner (Array in spiral order) (Delhivery) 
 - [ ] UnionThreeArray
@@ -72,6 +71,7 @@ B) Java**
 ## 2D Array / Matrix
 - [Diagonals sums of a matrix](#DiagonalsSums)
 - [Find transpose of a matrix (Make Row as column)](#FindTransposeMatrix)
+- [Print a given matrix in spiral form (First Print outer then print inner)](#PrintSpiralMatrix)
 
 ## Linked list
 - [Reverse Linked list](#ReverseLinkedList)
@@ -1164,6 +1164,61 @@ Output :<br>
 1 4 7 <br>
 2 5 8 <br>
 3 6 9<br>**
+
+## PrintSpiralMatrix
+
+    public static void spiralMatrixPrint(int[][] arr) {
+
+        int rows = arr.length;
+        int cols = arr[0].length;
+        // Defining the boundaries of the matrix.
+        int top = 0, bottom = rows - 1, left = 0, right = cols - 1;
+
+        // Defining the direction in which the array is to be traversed.
+        int dir = 1;
+
+        while (top <= bottom && left <= right) {
+
+            if (dir == 1) {    // moving left->right
+                for (int i = left; i <= right; ++i) {
+                    System.out.print(arr[top][i] + " ");
+                }
+                // Since we have traversed the whole first
+                // row, move down to the next row.
+                ++top;
+                dir = 2;
+            } else if (dir == 2) {     // moving top->bottom
+                for (int i = top; i <= bottom; ++i) {
+                    System.out.print(arr[i][right] + " ");
+                }
+                // Since we have traversed the whole last
+                // column, move left to the previous column.
+                --right;
+                dir = 3;
+            } else if (dir == 3) {     // moving right->left
+                for (int i = right; i >= left; --i) {
+                    System.out.print(arr[bottom][i] + " ");
+                }
+                // Since we have traversed the whole last
+                // row, move up to the previous row.
+                --bottom;
+                dir = 4;
+            } else if (dir == 4) {     // moving bottom->up
+                for (int i = bottom; i >= top; --i) {
+                    System.out.print(arr[i][left] + " ");
+                }
+                // Since we have traversed the whole first
+                // col, move right to the next column.
+                ++left;
+                dir = 1;
+            }
+        }
+    }
+**Input : <br>
+1 2 3 <br>
+4 5 6 <br>
+7 8 9<br>
+Output : 1,2,3,6,9,8,7,4,5**
 
 ## ReverseLinkedList
     void reverseLinkedList(Node head) {
