@@ -64,6 +64,7 @@ B) Java**
 - [Shuffle deck of cards](#ShuffleDeckOfCards)
 - [Sort array (N)](#SortArray)
 - [Binary search](#BinarySearch)
+- [Binary Rotated Search](#BinaryRotatedSearch)
 - [Merge Sort](#MergeSort) **nLog(N)**
 - [Find all triplets with zero sum **(Paytm)**](#FindAllTripletWithZeroSum)
 
@@ -922,6 +923,44 @@ Remove 1 : {1,3}
 	}
 **I/P -> arr = {1, 2, 3, 4, 5, 6, 7}<br>**
 **O/P -> Item 2 find at Index 1**
+
+## BinaryRotatedSearch
+
+	void binaryRotatedSearch() {
+	  var arr = [4, 5, 6, 7, 1, 2, 3];
+	  var item = 2;
+	  var li = 0;
+	  var hi = arr.length;
+	  var mid = ((hi + li) / 2).toInt();
+	  while (li <= hi) {
+	    if (arr[mid] == item) {
+	      print("Item $item find at Index $mid");
+	      break;
+	    } else if (arr[li] <= arr[mid]) {
+	      // left array is sorted
+	      if (item >= arr[li] && item < arr[mid]) {
+	        // target lies between start and mid index
+	        hi = mid - 1;
+	      } else {
+	        li = mid + 1;
+	      }
+	    } else {
+	      // right array is sorted
+	      if (item > arr[mid] && item <= arr[hi]) {
+	        // target lies between mid and end index
+	        li = mid + 1;
+	      } else {
+	        hi = mid - 1;
+	      }
+	    }
+
+	    mid = ((hi + li) / 2).toInt();
+	  }
+	}
+
+**I/P -> arr = {4, 5, 6, 7, 1, 2, 3}<br>**
+**O/P -> Item 2 find at Index 5**
+
 
 ## MergeSort
 
