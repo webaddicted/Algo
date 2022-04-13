@@ -958,8 +958,8 @@ Remove 1 : {1,3}
 	  }
 	}
 
-**I/P -> arr = {4, 5, 6, 7, 1, 2, 3}<br>**
-**O/P -> Item 2 find at Index 5**
+**I/P -> arr = {4, 5, 6, 1, 2, 3}<br>**
+**O/P -> Item 2 find at Index 4**
 
 
 ## MergeSort
